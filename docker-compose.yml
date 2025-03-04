@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  web-portfolio-srv:
+    networks:
+      portfolio-server:
+        ipv4_address: 172.16.0.2
+    image: nginx:latest
+    ports:
+      - '127.0.10.1:80:80/tcp'
+    volumes:
+      - ./www:/var/www/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    environment:
+      - TZ=Europe/Budapest
+    tty: true
+  node-srv:
+    build:
+      dockerfile: nodeDockerfile
+    ports:
+      - '127.0.10.1:8000:8000/tcp'
+    volumes:
+      - ./www:/var/www/html
+    working_dir: "/var/www/html"
+    tty: true
+    environment:
+      - TZ=Europe/Budapest
+    networks:
+      portfolio-server:
+        ipv4_address: 172.16.0.3
+networks:
+  portfolio-server:
+    driver: bridge
+    enable_ipv6: false
+    name: portfolio-network
+    ipam:
+      config:
+        - subnet: 172.16.0.0/16
+          gateway: 172.16.0.1
