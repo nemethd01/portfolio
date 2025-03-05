@@ -73,11 +73,6 @@
                         </div>
                     </div>
                 </div>
-                <div> végén iframe nem listázott - 4. Még jobb lenne egy videós bemutató
-                    Egy rövid videó (30-60 mp) a projekt működéséről
-                    OBS Studio vagy Screenity bővítménnyel felveheted
-                    Ha YouTube-ra feltöltöd, beágyazhatod az oldalra
-                </div>
             </div>
         </div>
     </div>

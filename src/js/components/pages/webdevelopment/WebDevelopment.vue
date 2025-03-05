@@ -20,9 +20,6 @@
                 <project-section/>
             </div>
         </div>
-<!--            op rendszerek, cyberbizt
-            <p>404 stb</p>-->
-<!--        soft skillek-->
     </div>
 </template>
 

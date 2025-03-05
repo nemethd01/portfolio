@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import skillIcon from "../../skill-icon.vue";
+import skillIcon from "../../../skill-icon.vue";
 import htmlSvg from "../../../../svg/html.vue";
 import cssSvg from "../../../../svg/css.vue";
 import jsSvg from "../../../../svg/js.vue";

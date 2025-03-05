@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import skillIcon from "../../skill-icon.vue";
+import skillIcon from "../../../skill-icon.vue";
 import phpSvg from "../../../../svg/php.vue";
 import htmlSvg from "../../../../svg/html.vue";
 

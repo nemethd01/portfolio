@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import skillIcon from "../../skill-icon.vue";
+import skillIcon from "../../../skill-icon.vue";
 import vueSvg from "../../../../svg/vue.vue";
 import htmlSvg from "../../../../svg/html.vue";
 import javascriptSvg from "../../../../svg/js.vue";
