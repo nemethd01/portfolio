@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";const n={};function t(o,s,a,c,i,r){return" About experience all technologies i can use (adobe alkalmazások is) elérhetőségek (github, insta, linkedin stb) - kedvenc könyvek - honnan tanultam - intj "}const l=e(n,[["render",t]]);export{l as A};

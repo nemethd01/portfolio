@@ -210,13 +210,11 @@
 }
 
 
-/* ******* Web Development  ******* */
-/* *** Skill icon *** */
-.web-development-page .skill-wrapper {
+/* ***** Skill icon ***** */
+
+.skill-wrapper {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/media/imgs/web-skill-background.jpg'), center, no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,6 +256,7 @@
     padding: 0.6rem;
     border-radius: 0.5rem;
     white-space: nowrap;
+    word-wrap: break-word;
     opacity: 0;
     visibility: hidden;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -270,6 +269,13 @@
     visibility: visible;
 }
 
+
+/* ******* Web Development  ******* */
+
+.web-development-page .skill-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/media/imgs/web-skill-background.jpg'), center, no-repeat;
+    background-size: cover;
+}
 
 .web-development-page h1 {
     font-weight: bold;
@@ -289,7 +295,6 @@
     border-radius: 0.5rem;
 }
 
-/* Web Project Cards */
 .web-development-page .web-project-wrapper {
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/media/imgs/web_projects_background.jpg'), center, no-repeat;
@@ -299,6 +304,7 @@
     align-items: center;
 }
 
+/* Web Project Cards */
 .web-project-card {
     text-decoration: none;
 }
@@ -394,6 +400,113 @@
 .web-projects-page .toOutsideLink:hover {
     color: var(--highlight-hover);
 }
+
+
+
+/* ***** Game Development ***** */
+
+.game-development-page .skill-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/media/imgs/joel-filipe-99neAF8kqhg-unsplash.jpg'), center, no-repeat;
+    background-size: cover;
+}
+
+.game-development-page h1 {
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #ff5f5f, #8e94ff);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+.game-development-page .card-text {
+    /*background: linear-gradient(to right, #ff5f5f, #8e94ff);*/
+    background: linear-gradient(to right, #34575a, #614c4c);
+    padding: 0 .5rem 0 .5rem;
+    border-radius: 0.5rem;
+}
+
+
+.game-development-page .game-project-wrapper {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/media/imgs/jr-korpa-SFT9G3pAxLY-unsplash.jpg'), center, no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Web Project Cards */
+.game-project-card {
+    text-decoration: none;
+}
+
+.game-card {
+    height: 10rem !important;
+    border: 1px solid #00bcd4 !important;
+    background: rgba(0, 188, 212, 0.15) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.game-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+}
+
+.game-card-img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-card-body {
+    color: var(--text-color);
+    padding: 1.2rem;
+    flex: 1;
+}
+
+.game-projects-header {
+    width: 100vw;
+    /*background: #401d1e;*/
+    background: linear-gradient(to right, #3c1a1a, #192731);
+    padding: 1rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.projects-overflow {
+    overflow: hidden;
+}
+
+.scrolling-text {
+    display: flex;
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    /*color: #c3f3fb;*/
+    color: #ffe6e6;
+    /*color: var(--highlight-color);*/
+    /*text-shadow: 0 0 5px #4c656c, 0 0 10px #3f5775, 0 0 15px #1c404a;*/
+    text-shadow: 0 0 5px #801c2b, 0 0 10px #711720, 0 0 10px #6e0b2a;
+    animation: scrollText 12s linear infinite;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 
 /* ******* Not Found Page - 404  ******* */

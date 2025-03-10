@@ -1,23 +1,22 @@
 <template>
-    <div class="web-development-page">
+    <div class="game-development-page">
         <div class="skill-wrapper">
             <div class="container my-5">
                 <div class="row">
                     <h1 class="text-center mb-5">Game Development</h1>
-
                     <skill-section/>
                 </div>
             </div>
         </div>
         <div class="projects-overflow">
-<!--            <project-header
-                :classes="['web-projects-header']"
+            <project-header
+                :classes="['game-projects-header']"
                 :projectTitle="'PROJEKTEK'"
-            />-->
+            />
         </div>
-        <div class="web-project-wrapper">
+        <div class="game-project-wrapper">
             <div class="container my-5">
-<!--                <project-section/>-->
+                <project-section/>
             </div>
         </div>
     </div>
@@ -32,14 +31,14 @@
 
 <script>
 import skillSection from "./SkillSection.vue";
-// import projectHeader from "../../project-header.vue";
-// import projectSection from "./ProjectSection.vue";
+import projectHeader from "../../project-header.vue";
+import projectSection from "./ProjectSection.vue";
 
 export default {
     components: {
         skillSection,
-        // projectHeader,
-        // projectSection,
+        projectHeader,
+        projectSection,
     },
     data() {
         return {}
