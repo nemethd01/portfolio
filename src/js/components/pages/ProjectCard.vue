@@ -5,7 +5,7 @@
             <img :src="projectImage" :class="[imgClasses]" alt="Project Image">
             <div :class="[cardBodyClasses]">
                 <h5 class="card-title">{{ projectName }}</h5>
-                <p class="card-text fst-italic">{{ projectTechnologies }}</p>
+                <p :class="['card-text', 'fst-italic', cardTextClasses]">{{ projectTechnologies }}</p>
             </div>
         </div>
         </router-link>
@@ -39,6 +39,10 @@ export default {
             default: []
         },
         cardBodyClasses: {
+            type: Array,
+            default: []
+        },
+        cardTextClasses: {
             type: Array,
             default: []
         }

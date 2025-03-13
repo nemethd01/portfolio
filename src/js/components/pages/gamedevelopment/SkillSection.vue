@@ -8,14 +8,16 @@
                 </div>
             </div>
 
-            <h4>Programozási nyelvek és Technológiák</h4>
-            <div class="skill-icon-container">
-                <skill-icon name="C++" :icon="cppSvg" level="Alapok"/>
-                <skill-icon name="JavaScript" :icon="jsSvg"/>
-                <skill-icon name="Python" :icon="pythonSvg" level="Alapok"/>
-                <skill-icon name="PHP" :icon="phpSvg"/>
-                <skill-icon name="Bash" :icon="bashSvg" level="Alapok"/>
-                <skill-icon name="MariaDB (MySQL)" :icon="mariadbSvg"/>
+            <div>
+                <h4>Programozási nyelvek és Technológiák</h4>
+                <div class="skill-icon-container">
+                    <skill-icon name="C++" :icon="cppSvg" level="Alapok"/>
+                    <skill-icon name="JavaScript" :icon="jsSvg"/>
+                    <skill-icon name="Python" :icon="pythonSvg" level="Alapok"/>
+                    <skill-icon name="PHP" :icon="phpSvg"/>
+                    <skill-icon name="Bash" :icon="bashSvg" level="Alapok"/>
+                    <skill-icon name="MariaDB (MySQL)" :icon="mariadbSvg"/>
+                </div>
             </div>
 
             <h4>Fejlesztői Eszközök és Környezetek</h4>
@@ -24,6 +26,7 @@
                 <skill-icon name="CLion" :icon="clionSvg"/>
                 <skill-icon name="Visual Studio Code" :icon="vscodeSvg"/>
                 <skill-icon name="Visual Studio" :icon="vsSvg"/>
+                <skill-icon name="Sublime Text" :icon="sublimeSvg"/>
             </div>
 
             <h4>Grafikai és 3D Tervezés</h4>
@@ -43,30 +46,36 @@
                 <skill-icon name="Figma" :icon="figmaSvg"/>
             </div>
 
-            <h4>Debugging és Fordítás</h4>
-            <div class="skill-icon-container">
-                <skill-icon name="x64dbg" :icon="x64dbgSvg" level="Alapok"/>
-                <skill-icon name="CMake" :icon="cmakeSvg" level="Alapok"/>
-                <skill-icon name="Docker" :icon="dockerSvg"/>
-                <skill-icon name="Oracle VirtualBox" :icon="virtualboxSvg"/>
-            </div>
-
-            <h4>Verziókezelés és Project Management</h4>
-            <div class="skill-icon-container">
-                <skill-icon name="Git" :icon="gitSvg"/>
-                <skill-icon name="GitHub" :icon="githubSvg"/>
-                <skill-icon name="ClickUp" :icon="clickupSvg"/>
-            </div>
-
-            <div class="col-md-4 col-sm-12">
-                <h4>Egyéb Eszközök</h4>
+            <div class="col-md-6">
+                <h4>Debugging és Fordítás</h4>
                 <div class="skill-icon-container">
-                    <skill-icon name="Premiere Pro" :icon="premiereSvg"/>
-                    <skill-icon name="DaVinci Resolve" :icon="davinciSvg"/>
+                    <skill-icon name="x64dbg" :icon="x64dbgSvg" level="Alapok"/>
+                    <skill-icon name="CMake" :icon="cmakeSvg" level="Alapok"/>
+                    <skill-icon name="Docker" :icon="dockerSvg"/>
+                    <skill-icon name="Oracle VirtualBox" :icon="virtualboxSvg"/>
                 </div>
             </div>
 
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-6">
+                <h4>Verziókezelés és Project Management</h4>
+                <div class="skill-icon-container">
+                    <skill-icon name="Git" :icon="gitSvg"/>
+                    <skill-icon name="GitHub" :icon="githubSvg"/>
+                    <skill-icon name="ClickUp" :icon="clickupSvg"/>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <h4>Multimédia és Tartalomkészítés </h4>
+                <div class="skill-icon-container">
+                    <skill-icon name="Premiere Pro" :icon="premiereSvg"/>
+                    <skill-icon name="DaVinci Resolve" :icon="davinciSvg"/>
+                    <skill-icon name="Ableton Live" :icon="abletonSvg" level="Alapok"/>
+                    <skill-icon name="OBS Studio" :icon="obsSvg"/>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 mb-4">
                 <h4>Operációs rendszerek</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Windows" :icon="windowsSvg"/>
@@ -75,12 +84,20 @@
                     <skill-icon name="Kali Linux" :icon="kaliSvg"/>
                 </div>
             </div>
+
+            <h4 class="mb-4">Egyéb készségek és ismeretek</h4>
+            <other-skills-and-knowledge/>
+
         </div>
     </div>
 </template>
 
 <script>
+// components
 import skillIcon from "../skill-icon.vue";
+import otherSkillsAndKnowledge from "./OtherSkillsAndKnowledge.vue";
+
+// icons
 import unrealSvg from '../../svg/unreal.vue';
 import jsSvg from '../../svg/js.vue';
 import phpSvg from '../../svg/php.vue';
@@ -115,11 +132,14 @@ import x64dbgSvg from "../../svg/x64dbg.vue";
 import kritaSvg from "../../svg/krita.vue";
 import gaeaSvg from "../../svg/gaea.vue";
 import purerefSvg from "../../svg/pureref.vue";
+import abletonSvg from "../../svg/ableton.vue";
+import obsSvg from "../../svg/obs.vue";
 
 
 export default {
     components: {
         skillIcon,
+        otherSkillsAndKnowledge,
     },
     data() {
         return {
@@ -157,6 +177,8 @@ export default {
             kritaSvg,
             substancepainterSvg,
             purerefSvg,
+            abletonSvg,
+            obsSvg,
         };
     }
 }
@@ -164,5 +186,6 @@ export default {
 
 
 <style scoped>
+
 
 </style>

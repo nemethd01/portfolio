@@ -1,5 +1,5 @@
 <template>
-    <div :class="[classes]">
+    <div :class="['projects-header', classes]">
         <div class="scrolling-text">
             <span v-for="i in 10" :key="i">{{ projectTitle }} &nbsp; // &nbsp;</span>
         </div>

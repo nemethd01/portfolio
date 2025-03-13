@@ -6,6 +6,9 @@ experience
     - kedvenc könyvek
     - honnan tanultam
     - intj
+    - artstation profile
+    - oldal tetejére ugrás
+    - kedvenc játékaim és róluk néhány mondat, inspiráció stb.
 </template>
 
 <script>

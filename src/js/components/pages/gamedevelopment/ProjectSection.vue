@@ -9,6 +9,7 @@
             :routerClasses="['game-project-card']"
             :imgClasses="['game-card-img']"
             :cardBodyClasses="['game-card-body']"
+            :cardTextClasses="['game-card-text']"
         />
     </div>
 </template>

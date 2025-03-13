@@ -29,13 +29,14 @@
                 <skill-icon name="CMake" :icon="cmakeSvg" level="Alapszint"/>
                 <skill-icon name="Yarn" :icon="yarnSvg"/>
                 <skill-icon name="NPM" :icon="npmSvg"/>
+                <skill-icon name="Navicat" :icon="navicatSvg"/>
                 <skill-icon name="Oracle VirtualBox" :icon="virtualboxSvg"/>
                 <skill-icon name="PhpStorm" :icon="phpstormSvg"/>
                 <skill-icon name="WebStorm" :icon="webstormSvg"/>
                 <skill-icon name="CLion" :icon="clionSvg"/>
                 <skill-icon name="Visual Studio Code" :icon="vscodeSvg"/>
                 <skill-icon name="Visual Studio" :icon="vsSvg"/>
-                <skill-icon name="SublimeText" :icon="sublimeSvg"/>
+                <skill-icon name="Sublime Text" :icon="sublimeSvg"/>
             </div>
 
             <h4>Verziókezelés és Project Management</h4>
@@ -46,7 +47,7 @@
                 <skill-icon name="Notion" :icon="notionSvg"/>
             </div>
 
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-12 mb-4">
                 <h4>Egyéb Eszközök</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Figma" :icon="figmaSvg"/>
@@ -57,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-12 mb-4">
                 <h4>Operációs rendszerek</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Windows" :icon="windowsSvg"/>
@@ -66,12 +67,20 @@
                     <skill-icon name="Kali Linux" :icon="kaliSvg"/>
                 </div>
             </div>
+
+            <h4 class="mb-4">Egyéb készségek és ismeretek</h4>
+            <other-skills-and-knowledge/>
+
         </div>
     </div>
 </template>
 
 <script>
+// components
 import skillIcon from "../skill-icon.vue";
+import otherSkillsAndKnowledge from "../webdevelopment/OtherSkillsAndKnowledge.vue";
+
+// icons
 import htmlSvg from '../../svg/html.vue';
 import cssSvg from '../../svg/css.vue';
 import jsSvg from '../../svg/js.vue';
@@ -110,10 +119,12 @@ import linuxSvg from "../../svg/linux.vue";
 import raspberrySvg from "../../svg/raspberry.vue";
 import kaliSvg from "../../svg/kali.vue";
 import bashSvg from "../../svg/bash.vue";
+import navicatSvg from "../../svg/navicat.vue";
 
 
 export default {
     components: {
+        otherSkillsAndKnowledge,
         skillIcon,
     },
     data() {
@@ -156,6 +167,7 @@ export default {
             raspberrySvg,
             kaliSvg,
             bashSvg,
+            navicatSvg
         };
     }
 }

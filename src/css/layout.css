@@ -288,7 +288,7 @@
     animation: fadeIn 1s ease-out;
 }
 
-.web-development-page .card-text {
+.web-card-text {
     /*background: linear-gradient(to right, #ff5f5f, #8e94ff);*/
     background: linear-gradient(to right, #34575a, #614c4c);
     padding: 0 .5rem 0 .5rem;
@@ -303,6 +303,18 @@
     justify-content: center;
     align-items: center;
 }
+
+
+/* Web other skill cards */
+.web-other-skills .skill-card {
+    background-color: rgba(115, 154, 156, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.web-other-skills .card-text li {
+    color: #ddf9ff !important;
+}
+
 
 /* Web Project Cards */
 .web-project-card {
@@ -337,40 +349,12 @@
 }
 
 .web-projects-header {
-    width: 100vw;
-    /*background: #401d1e;*/
     background: linear-gradient(to right, #3c1a1a, #192731);
-    padding: 1rem 0;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
 }
 
-.projects-overflow {
-    overflow: hidden;
-}
-
-.scrolling-text {
-    display: flex;
-    font-size: 2.3rem;
-    font-weight: bold;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    /*color: #c3f3fb;*/
+.web-projects-header .scrolling-text {
     color: #ffe6e6;
-    /*color: var(--highlight-color);*/
-    /*text-shadow: 0 0 5px #4c656c, 0 0 10px #3f5775, 0 0 15px #1c404a;*/
     text-shadow: 0 0 5px #801c2b, 0 0 10px #711720, 0 0 10px #6e0b2a;
-    animation: scrollText 12s linear infinite;
-}
-
-@keyframes scrollText {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
 }
 
 
@@ -414,20 +398,18 @@
     font-weight: bold;
     letter-spacing: 0.2rem;
     font-size: 3.5rem;
-    background: linear-gradient(to right, #ff5f5f, #8e94ff);
+    background: linear-gradient(to right, #c3e9ff, #ffa2ff);
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-out;
 }
 
-.game-development-page .card-text {
-    /*background: linear-gradient(to right, #ff5f5f, #8e94ff);*/
-    background: linear-gradient(to right, #34575a, #614c4c);
+.game-card-text {
+    background: linear-gradient(to right, #400c67, #d84242);
     padding: 0 .5rem 0 .5rem;
     border-radius: 0.5rem;
 }
-
 
 .game-development-page .game-project-wrapper {
     width: 100%;
@@ -438,7 +420,8 @@
     align-items: center;
 }
 
-/* Web Project Cards */
+
+/* Game Project Cards */
 .game-project-card {
     text-decoration: none;
 }
@@ -471,13 +454,28 @@
 }
 
 .game-projects-header {
-    width: 100vw;
     /*background: #401d1e;*/
-    background: linear-gradient(to right, #3c1a1a, #192731);
+    background: linear-gradient(to right, #3c1a1a, #192731) !important;
+}
+
+.game-projects-header .scrolling-text {
+    /*color: #c3f3fb;*/
+    color: #ffe6e6 !important;
+    /*color: var(--highlight-color);*/
+    /*text-shadow: 0 0 5px #4c656c, 0 0 10px #3f5775, 0 0 15px #1c404a;*/
+    text-shadow: 0 0 5px #801c2b, 0 0 10px #711720, 0 0 10px #6e0b2a !important;
+}
+
+
+/* *** Projects header - Scrolling text *** */
+
+.projects-header {
+    width: 100vw;
     padding: 1rem 0;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
+    background: linear-gradient(to right, #3c1a1a, #192731);
 }
 
 .projects-overflow {
@@ -490,10 +488,7 @@
     font-weight: bold;
     font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
-    /*color: #c3f3fb;*/
     color: #ffe6e6;
-    /*color: var(--highlight-color);*/
-    /*text-shadow: 0 0 5px #4c656c, 0 0 10px #3f5775, 0 0 15px #1c404a;*/
     text-shadow: 0 0 5px #801c2b, 0 0 10px #711720, 0 0 10px #6e0b2a;
     animation: scrollText 12s linear infinite;
 }
@@ -507,6 +502,41 @@
     }
 }
 
+
+
+/* Other skill cards */
+.other-skills .skill-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border: none;
+    border-radius: 8px;
+    color: #ddd;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.other-skills .skill-card:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.other-skills .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.other-skills .card-text {
+    text-align: left;
+    padding-left: 0;
+}
+
+.other-skills .card-text li {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
 
 
 /* ******* Not Found Page - 404  ******* */
