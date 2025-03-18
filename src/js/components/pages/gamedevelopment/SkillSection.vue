@@ -61,6 +61,7 @@
                 <div class="skill-icon-container">
                     <skill-icon name="Git" :icon="gitSvg"/>
                     <skill-icon name="GitHub" :icon="githubSvg"/>
+                    <skill-icon name="GitLab" :icon="gitlabSvg"/>
                     <skill-icon name="ClickUp" :icon="clickupSvg"/>
                 </div>
             </div>
@@ -134,6 +135,7 @@ import gaeaSvg from "../../svg/gaea.vue";
 import purerefSvg from "../../svg/pureref.vue";
 import abletonSvg from "../../svg/ableton.vue";
 import obsSvg from "../../svg/obs.vue";
+import gitlabSvg from "../../svg/gitlab.vue";
 
 
 export default {
@@ -179,6 +181,7 @@ export default {
             purerefSvg,
             abletonSvg,
             obsSvg,
+            gitlabSvg
         };
     }
 }

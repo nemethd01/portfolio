@@ -20,13 +20,6 @@
             </div>
         </div>
     </div>
-<!--    Game
-    - rule of thirds-->
-<!--    egyéb skillek cinematography stb-->
-<!--    dokumentáció-->
-<!--    concept art-->
-<!--    3d eszközök-->
-<!--    video és képszerkesztők-->
 </template>
 
 <script>

@@ -43,6 +43,7 @@
             <div class="skill-icon-container">
                 <skill-icon name="Git" :icon="gitSvg"/>
                 <skill-icon name="GitHub" :icon="githubSvg"/>
+                <skill-icon name="GitLab" :icon="gitlabSvg"/>
                 <skill-icon name="ClickUp" :icon="clickupSvg"/>
                 <skill-icon name="Notion" :icon="notionSvg"/>
             </div>
@@ -120,6 +121,7 @@ import raspberrySvg from "../../svg/raspberry.vue";
 import kaliSvg from "../../svg/kali.vue";
 import bashSvg from "../../svg/bash.vue";
 import navicatSvg from "../../svg/navicat.vue";
+import gitlabSvg from "../../svg/gitlab.vue";
 
 
 export default {
@@ -167,7 +169,8 @@ export default {
             raspberrySvg,
             kaliSvg,
             bashSvg,
-            navicatSvg
+            navicatSvg,
+            gitlabSvg,
         };
     }
 }

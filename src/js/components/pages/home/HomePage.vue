@@ -35,7 +35,7 @@ export default {
     data() {
         return {
             profile,
-            navbarHeight: 56
+            navbarHeight: 56,
         }
     },
     mounted() {

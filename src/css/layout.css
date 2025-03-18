@@ -391,6 +391,7 @@
 
 .game-development-page .skill-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/media/imgs/joel-filipe-99neAF8kqhg-unsplash.jpg'), center, no-repeat;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('/media/imgs/pawel-czerwinski-1QAXTrmx5rU-unsplash.jpg'), center, no-repeat;*/
     background-size: cover;
 }
 
@@ -536,6 +537,93 @@
     margin-left: 20px;
     font-size: 0.9rem;
     color: #bbb;
+}
+
+
+/* ******* About Page  ******* */
+
+.about-page .about-wrapper {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/media/imgs/pawel-czerwinski-FCDsvEozIN4-unsplash.jpg'), center, no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    font-size: 3.5rem;
+    background: linear-gradient(to right, #ff5f5f, #c5ccfd);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+/* About page, experience section cards */
+.experience-section .card {
+    background-color: rgba(119, 161, 170, 0.2) !important;
+    backdrop-filter: blur(2px);
+    border: none;
+    border-radius: 8px;
+    color: #ddd;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.experience-section h6 {
+    color: #a3a3a3;
+}
+
+.experience-section .card:hover {
+    background-color: rgba(209, 14, 14, 0.15) !important;
+}
+
+
+/* Social media icons */
+
+.social-media-icon {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.social-media:hover {
+    transform: scale(1.2);
+}
+
+.social-media-icon .icon {
+    width: 65%;
+    height: 65%;
+}
+
+.social-media-card {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--text-color);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    word-wrap: break-word;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-icon:hover .social-media-card {
+    opacity: 1;
+    visibility: visible;
 }
 
 
