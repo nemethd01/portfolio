@@ -1,7 +1,7 @@
 <template>
     <div class="experience-section">
         <div class="container mt-4">
-            <h2 class="mb-4">Szakmai Tapasztalat</h2>
+            <h2 class="mb-4">{{ $t('experienceAndStudies') }}</h2>
             <div v-for="job in experiences" :key="job.position" class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ job.position }} | <span class="fw-bold">{{ job.company }}</span></h5>
@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <h2 class="mt-4 mb-4">Tanulmányok</h2>
+            <h2 class="mt-4 mb-4">{{ $t('education') }}</h2>
             <div v-for="study in studies" :key="study.institution" class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ study.degree }} | <span class="fw-bold">{{ study.institution }}</span>

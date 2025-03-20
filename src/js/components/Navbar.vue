@@ -13,12 +13,12 @@
                   exact-active-class="router-link-exact-active"
                   active-class="router-link-active"
               >
-                  Home
+                  {{ $t('home') }}
               </router-link>
           </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Work
+                    {{ $t('work') }}
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end custom-navbar-bg">
                     <router-link
@@ -27,7 +27,7 @@
                         exact-active-class="router-link-exact-active"
                         active-class="router-link-active"
                     >
-                        Web Development
+                        {{ $t('webDevelopment') }}
                     </router-link>
                     <router-link
                         to="/work/game-development"
@@ -35,7 +35,7 @@
                         active-class="router-link-active"
                         exact-active-class="router-link-exact-active"
                     >
-                        Game Development
+                        {{ $t('gameDevelopment') }}
                     </router-link>
                 </ul>
             </li>
@@ -46,9 +46,16 @@
                 exact-active-class="router-link-exact-active"
                 active-class="router-link-active"
             >
-                About
+                {{ $t('about') }}
             </router-link>
           </li>
+            <li class="nav-item">
+                <div class="ms-auto d-flex">
+                    <button @click="toggleLanguage" class="btn btn-link p-0 mx-2" :title="$t('switchLanguage')">
+                        <component :is="currentFlag" alt="Change Language" class="flag-icon"/>
+                    </button>
+                </div>
+            </li>
         </ul>
       </div>
     </div>
@@ -56,9 +63,46 @@
 </template>
 
 <script>
+import hungaryFlag from "./svg/flags/hungary.vue";
+import englishFlag from "./svg/flags/english.vue";
 
+export default {
+    data() {
+        return {
+            flags: {
+                hu: hungaryFlag,
+                en: englishFlag
+            }
+        }
+    },
+    computed: {
+        currentFlag() {
+            return this.$i18n.locale === 'hu' ? this.flags.en : this.flags.hu;
+        }
+    },
+    methods: {
+        toggleLanguage() {
+            const newLang = this.$i18n.locale === 'hu' ? 'en' : 'hu';
+            this.$i18n.locale = newLang;
+            this.$i18n.global.locale = newLang;
+            localStorage.setItem('language', newLang);
+        }
+    },
+    mounted() {
+        const savedLang = localStorage.getItem('language');
+        if (savedLang) {
+            this.$i18n.locale = savedLang;
+            this.$i18n.global.locale = savedLang;
+        }
+    }
+}
 </script>
 
 <style scoped>
-
+.flag-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 </style>

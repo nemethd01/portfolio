@@ -599,6 +599,30 @@
     color: #c9bbef;
 }
 
+.about-page .profile-picture {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-page .profile-picture:hover {
+    transform: scale(1.05);
+}
+
+.about-page .profile-info {
+    background-color: rgba(122, 145, 152, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+.about-page .profile-info:hover {
+    transform: scale(1.03);
+}
+
+
 /* About page, experience section cards */
 
 .experience-section .container {
