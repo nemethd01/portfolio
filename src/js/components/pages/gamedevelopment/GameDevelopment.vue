@@ -3,7 +3,7 @@
         <div class="skill-wrapper">
             <div class="container my-5">
                 <div class="row">
-                    <h1 class="text-center mb-5">Game Development</h1>
+                    <h1 class="text-center mb-5">{{ $t('gameDevelopment') }}</h1>
                     <skill-section/>
                 </div>
             </div>
@@ -11,7 +11,7 @@
         <div class="projects-overflow">
             <project-header
                 :classes="['game-projects-header']"
-                :projectTitle="'PROJEKTEK'"
+                :projectTitle="$t('projectsHeaderTitle')"
             />
         </div>
         <div class="game-project-wrapper">

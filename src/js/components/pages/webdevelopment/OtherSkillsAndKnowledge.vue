@@ -1,6 +1,6 @@
 <template>
     <div class="row other-skills web-other-skills">
-        <div class="col-md-4 col-sm-12" v-for="(skill, index) in otherSkills" :key="index">
+        <div class="col-md-4 col-sm-12" v-for="(skill, index) in translatedSkills" :key="index">
             <div class="card skill-card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ skill.title }}</h5>
@@ -14,53 +14,58 @@
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n';
+
 export default {
     data() {
         return {
             otherSkills: [
                 {
-                    title: "Vue",
+                    title: "vue",
                     text: [
-                        "Router",
-                        "Option API",
-                        "Props",
-                        "Regex",
-                        "Components",
-                        "Slots",
-                        "Provide - Inject",
-                        "Input validation",
+                        "router",
+                        "optionAPI",
+                        "props",
+                        "regex",
+                        "components",
+                        "slots",
+                        "provideInject",
+                        "inputValidation",
                     ]
                 },
                 {
-                    title: "PHP/Laravel",
+                    title: "phpLaravel",
                     text: [
-                        "Blade",
-                        "MVC (Model-View-Controller)",
-                        "OOP",
-                        "PDO",
-                        "Single Page Applications (SPA)",
-                        "Autoload",
-                        "Validation",
-                        "Eloquent"
+                        "blade",
+                        "mvc",
+                        "oop",
+                        "pdo",
+                        "spa",
+                        "autoload",
+                        "validation",
+                        "eloquent",
+                        "seeders",
                     ]
                 },
                 {
-                    title: "Egyéb",
+                    title: "other",
                     text: [
-                        "Hardware-es ismeretek",
-                        "Cybersecurity alapismeretek",
-                        "Microsoft Office alkalmazások",
+                        "hardware",
+                        "cybersecurity",
+                        "microsoftOffice",
                     ]
                 },
             ],
+        };
+    },
+    computed: {
+        translatedSkills() {
+            const { t } = useI18n();
+            return this.otherSkills.map(skill => ({
+                title: t(`otherSkills.${skill.title}`),
+                text: skill.text.map(item => t(`otherSkills.${item}`))
+            }));
         }
     }
-}
+};
 </script>
-
-<style scoped>
-
-
-
-
-</style>

@@ -204,6 +204,14 @@
     background-color: #00040e !important;
 }
 
+/* Localization */
+.flag-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 /* ******* Footer ******* */
 .custom-footer {
     border-top: 2px solid var(--highlight-color);

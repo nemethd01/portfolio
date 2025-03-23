@@ -12,7 +12,7 @@
         <div class="projects-overflow">
             <project-header
                 :classes="['web-projects-header']"
-                :projectTitle="'PROJEKTEK'"
+                :projectTitle="$t('projectsHeaderTitle')"
             />
         </div>
         <div class="web-project-wrapper">
@@ -36,7 +36,7 @@ export default {
     },
     data() {
         return {}
-    }
+    },
 }
 </script>
 

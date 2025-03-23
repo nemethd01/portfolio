@@ -2,7 +2,7 @@
     <div class="experience-section">
         <div class="container mt-4">
             <h2 class="mb-4">{{ $t('experienceAndStudies') }}</h2>
-            <div v-for="job in experiences" :key="job.position" class="card mb-3">
+            <div v-for="job in translatedExperiences" :key="job.position" class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ job.position }} | <span class="fw-bold">{{ job.company }}</span></h5>
                     <h6 class="card-subtitle">{{ job.period }}</h6>
@@ -11,10 +11,9 @@
             </div>
 
             <h2 class="mt-4 mb-4">{{ $t('education') }}</h2>
-            <div v-for="study in studies" :key="study.institution" class="card mb-3">
+            <div v-for="study in translatedStudies" :key="study.institution" class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title">{{ study.degree }} | <span class="fw-bold">{{ study.institution }}</span>
-                    </h5>
+                    <h5 class="card-title">{{ study.degree }} | <span class="fw-bold">{{ study.institution }}</span></h5>
                     <h6 class="card-subtitle">{{ study.period }}</h6>
                     <p class="card-text mt-2">{{ study.description }}</p>
                 </div>
@@ -24,44 +23,66 @@
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n';
+
 export default {
     data() {
         return {
             experiences: [
                 {
-                    position: "Szoftverfejlesztő (Full Stack)",
-                    company: "ZNET Telekom Zrt., Győr",
-                    period: "2023 AUG. – ...",
-                    description: "Vállalatirányítási szoftver fejlesztésében való részvétel, meglévő szoftverek üzemeltetése és továbbfejlesztése, tanuló projektek készítése."
+                    position: "softwareDeveloperZNET",
+                    company: "companyZNET",
+                    period: "periodZNET",
+                    description: "descriptionZNET"
                 },
                 {
-                    position: "Informatikai értékesítő/szervizes",
-                    company: "PC ABC Számítástechnika, Győr",
-                    period: "2023 MÁJ. – 2023 JÚL.",
-                    description: "Laptopok, számítógépek, perifériák értékesítése, építése, szervizelése. Ügyfelekkel való kapcsolattartás személyesen, telefonon és írásban."
+                    position: "itSalesTechnician",
+                    company: "companyPCABC",
+                    period: "periodPCABC",
+                    description: "descriptionPCABC"
                 },
             ],
             studies: [
                 {
-                    degree: "Junior Frontend Fejlesztő",
-                    institution: "Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum, Győr",
-                    period: "2022 DEC. – 2023 NOV.",
-                    description: "HTML, CSS, SCSS, JavaScript, Python, Bootstrap, Vue.js keretrendszer alapszintű ismerete és webalkalmazások automatikus tesztelésének alapszintű megismerése."
+                    degree: "juniorFrontend",
+                    institution: "schoolJedlik",
+                    period: "periodJedlik",
+                    description: "descriptionJedlik"
                 },
                 {
-                    degree: "Érettségi + 4123 FEOR",
-                    institution: "Győri SZC Deák Ferenc Közgazdasági Technikum, Győr",
-                    period: "2017 SZEPT. – 2022 JÚN.",
-                    description: "Statisztikai, pénzügyi, marketinges, gazdaságinformatikai és vállalkozási ismeretek, valamint ECDL vizsga megszerzése."
+                    degree: "highSchoolDiploma",
+                    institution: "schoolDeak",
+                    period: "periodDeak",
+                    description: "descriptionDeak"
                 },
                 {
-                    degree: "ECDL Tanfolyam",
-                    institution: "Győri SZC Deák Ferenc Közgazdasági Technikum, Győr",
-                    period: "2017 DEC. – 2019 MÁJ.",
-                    description: "ECDL - European Computer Driving Licence (7 modules)"
+                    degree: "ecdlCourse",
+                    institution: "schoolDeak",
+                    period: "periodECDL",
+                    description: "descriptionECDL"
                 }
             ]
         };
+    },
+    computed: {
+        translatedExperiences() {
+            const { t } = useI18n();
+            return this.experiences.map(job => ({
+                position: t(`experiences.${job.position}`),
+                company: t(`experiences.${job.company}`),
+                period: t(`experiences.${job.period}`),
+                description: t(`experiences.${job.description}`)
+            }));
+        },
+        translatedStudies() {
+            const { t } = useI18n();
+            return this.studies.map(study => ({
+                degree: t(`studies.${study.degree}`),
+                institution: t(`studies.${study.institution}`),
+                period: t(`studies.${study.period}`),
+                description: t(`studies.${study.description}`)
+            }));
+        }
     }
 };
 </script>

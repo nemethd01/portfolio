@@ -49,12 +49,11 @@
                 {{ $t('about') }}
             </router-link>
           </li>
-            <li class="nav-item">
-                <div class="ms-auto d-flex">
-                    <button @click="toggleLanguage" class="btn btn-link p-0 mx-2" :title="$t('switchLanguage')">
-                        <component :is="currentFlag" alt="Change Language" class="flag-icon"/>
-                    </button>
-                </div>
+<!--            Flag - Localization -->
+            <li class="nav-item d-flex align-items-center">
+                <button @click="toggleLanguage" class="btn btn-link p-0 mx-2 d-flex align-items-center justify-content-center" :title="$t('switchLanguage')">
+                    <component :is="currentFlag" alt="Change Language" class="flag-icon"/>
+                </button>
             </li>
         </ul>
       </div>
@@ -99,10 +98,5 @@ export default {
 </script>
 
 <style scoped>
-.flag-icon {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-}
+
 </style>

@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-12">
-                <h4>Játék motor</h4>
+                <h4>{{ $t('gameEngine') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Unreal Engine 5" :icon="unrealSvg"/>
                 </div>
             </div>
 
             <div>
-                <h4>Programozási nyelvek és Technológiák</h4>
+                <h4>{{ $t('languagesAndTechnology') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="C++" :icon="cppSvg" level="Alapok"/>
                     <skill-icon name="JavaScript" :icon="jsSvg"/>
@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <h4>Fejlesztői Eszközök és Környezetek</h4>
+            <h4>{{ $t('toolsAndEnvironments') }}</h4>
             <div class="skill-icon-container">
                 <skill-icon name="Rider" :icon="riderSvg"/>
                 <skill-icon name="CLion" :icon="clionSvg"/>
@@ -29,7 +29,7 @@
                 <skill-icon name="Sublime Text" :icon="sublimeSvg"/>
             </div>
 
-            <h4>Grafikai és 3D Tervezés</h4>
+            <h4>{{ $t('graphicAnd3d') }}</h4>
             <div class="skill-icon-container">
                 <skill-icon name="Blender" :icon="blenderSvg" level="Alapok"/>
                 <skill-icon name="Gaea" :icon="gaeaSvg" level="Heightmap Generálás - Alapok"/>
@@ -39,7 +39,7 @@
                 <skill-icon name="Krita" :icon="kritaSvg" level="Concept Art, Sketching"/>
             </div>
 
-            <h4>Narratív és Játékmenet Design</h4>
+            <h4>{{ $t('narrativeAndGameplayDesign') }}</h4>
             <div class="skill-icon-container">
                 <skill-icon name="GitBook" :icon="gitbookSvg"/>
                 <skill-icon name="Notion" :icon="notionSvg"/>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="col-md-6">
-                <h4>Debugging és Fordítás</h4>
+                <h4>{{ $t('debuggingAndTranslation') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="x64dbg" :icon="x64dbgSvg" level="Alapok"/>
                     <skill-icon name="CMake" :icon="cmakeSvg" level="Alapok"/>
@@ -57,7 +57,7 @@
             </div>
 
             <div class="col-md-6">
-                <h4>Verziókezelés és Project Management</h4>
+                <h4>{{ $t('versionControlAndPm') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Git" :icon="gitSvg"/>
                     <skill-icon name="GitHub" :icon="githubSvg"/>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="col-md-6 col-sm-12">
-                <h4>Multimédia és Tartalomkészítés </h4>
+                <h4>{{ $t('multiMediaAndContentCreation') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Premiere Pro" :icon="premiereSvg"/>
                     <skill-icon name="DaVinci Resolve" :icon="davinciSvg"/>
@@ -77,7 +77,7 @@
             </div>
 
             <div class="col-md-6 col-sm-12 mb-4">
-                <h4>Operációs rendszerek</h4>
+                <h4>{{ $t('operatingSystems') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Windows" :icon="windowsSvg"/>
                     <skill-icon name="Linux" :icon="linuxSvg"/>
@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <h4 class="mb-4">Egyéb készségek és ismeretek</h4>
+            <h4 class="mb-4">{{ $t('otherSkillsAndKnowledge') }}</h4>
             <other-skills-and-knowledge/>
 
         </div>

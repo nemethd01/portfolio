@@ -1,32 +1,32 @@
 <template>
     <div class="container">
         <div class="row">
-            <h4>Programozási nyelvek és Technológiák</h4>
+            <h4>{{ $t('languagesAndTechnology') }}</h4>
             <div class="skill-icon-container">
                 <skill-icon name="HTML" :icon="htmlSvg"/>
                 <skill-icon name="CSS" :icon="cssSvg"/>
                 <skill-icon name="JavaScript" :icon="jsSvg"/>
                 <skill-icon name="SCSS" :icon="scssSvg"/>
                 <skill-icon name="PHP" :icon="phpSvg"/>
-                <skill-icon name="C++" :icon="cppSvg" level="Alapszint"/>
-                <skill-icon name="Python" :icon="pythonSvg" level="Alapszint"/>
-                <skill-icon name="Bash" :icon="bashSvg" level="Alapszint"/>
+                <skill-icon name="C++" :icon="cppSvg" :level="$t('basics')"/>
+                <skill-icon name="Python" :icon="pythonSvg" :level="$t('basics')"/>
+                <skill-icon name="Bash" :icon="bashSvg" :level="$t('basics')"/>
                 <skill-icon name="MariaDB (MySQL)" :icon="mariadbSvg"/>
             </div>
 
-            <h4>Keretrendszerek és Könyvtárak</h4>
+            <h4>{{ $t('frameworksAndLibs') }}</h4>
             <div class="skill-icon-container">
                 <skill-icon name="Vue" :icon="vueSvg"/>
-                <skill-icon name="Laravel" :icon="laravelSvg" level="Alapszint"/>
+                <skill-icon name="Laravel" :icon="laravelSvg" :level="$t('basics')"/>
                 <skill-icon name="Bootstrap" :icon="bootstrapSvg"/>
                 <skill-icon name="TailwindCSS" :icon="tailwindSvg"/>
-                <skill-icon name="Selenium" :icon="seleniumSvg" level="Alapszint"/>
+                <skill-icon name="Selenium" :icon="seleniumSvg" :level="$t('basics')"/>
             </div>
 
-            <h4>Fejlesztői Eszközök és Környezetek</h4>
+            <h4>{{ $t('toolsAndEnvironments') }}</h4>
             <div class="skill-icon-container">
                 <skill-icon name="Docker" :icon="dockerSvg"/>
-                <skill-icon name="CMake" :icon="cmakeSvg" level="Alapszint"/>
+                <skill-icon name="CMake" :icon="cmakeSvg" :level="$t('basics')"/>
                 <skill-icon name="Yarn" :icon="yarnSvg"/>
                 <skill-icon name="NPM" :icon="npmSvg"/>
                 <skill-icon name="Navicat" :icon="navicatSvg"/>
@@ -39,7 +39,7 @@
                 <skill-icon name="Sublime Text" :icon="sublimeSvg"/>
             </div>
 
-            <h4>Verziókezelés és Project Management</h4>
+            <h4>{{ $t('versionControlAndPm') }}</h4>
             <div class="skill-icon-container">
                 <skill-icon name="Git" :icon="gitSvg"/>
                 <skill-icon name="GitHub" :icon="githubSvg"/>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="col-md-6 col-sm-12 mb-4">
-                <h4>Egyéb Eszközök</h4>
+                <h4>{{ $t('otherTools') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Figma" :icon="figmaSvg"/>
                     <skill-icon name="Photoshop" :icon="photoshopSvg"/>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="col-md-6 col-sm-12 mb-4">
-                <h4>Operációs rendszerek</h4>
+                <h4>{{ $t('operatingSystems') }}</h4>
                 <div class="skill-icon-container">
                     <skill-icon name="Windows" :icon="windowsSvg"/>
                     <skill-icon name="Linux" :icon="linuxSvg"/>
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <h4 class="mb-4">Egyéb készségek és ismeretek</h4>
+            <h4 class="mb-4">{{ $t('otherSkillsAndKnowledge') }}</h4>
             <other-skills-and-knowledge/>
 
         </div>
