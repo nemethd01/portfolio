@@ -11,7 +11,7 @@
                 <skill-icon name="C++" :icon="cppSvg" :level="$t('basics')"/>
                 <skill-icon name="Python" :icon="pythonSvg" :level="$t('basics')"/>
                 <skill-icon name="Bash" :icon="bashSvg" :level="$t('basics')"/>
-                <skill-icon name="MariaDB (MySQL)" :icon="mariadbSvg"/>
+                <skill-icon name="MariaDB (SQL)" :icon="mariadbSvg"/>
             </div>
 
             <h4>{{ $t('frameworksAndLibs') }}</h4>

@@ -32,7 +32,7 @@ const messages = {
         otherSkillsAndKnowledge: 'Egyéb készségek és ismeretek',
         basics: 'Alapok',
 
-        otherSkills: {
+        webOtherSkills: {
             vue: "Vue",
             router: "Router",
             optionAPI: "Option API",
@@ -60,12 +60,58 @@ const messages = {
             microsoftOffice: "Microsoft Office alkalmazások",
         },
 
+        webProjects: {
+            queueScheduleTitle: "Beosztás naptár lefedettség jelzéssel",
+            kioskTitle: "Vásárlói Tájékoztató Kiosk",
+            fileManagerTitle: "File Manager",
+            numbersToStringsTitle: "Számok kiírása string-el",
+            calcAndRandomNumberTitle: "Számológép és random szám generátor PHP-vel",
+        },
+
         // Game Development Page
         gameEngine: 'Játék motor',
         graphicAnd3d: 'Grafikai és 3D Tervezés',
         narrativeAndGameplayDesign: 'Narratív és Játékmenet Design',
         debuggingAndTranslation: 'Debugging és Fordítás',
         multiMediaAndContentCreation: 'Multimédia és Tartalomkészítés',
+        gaeaDescription: "Heightmap Generálás - alapok",
+        pureRefDescription: "Referenciák és Tervezés",
+        substancePainterDescription: "Textúrázás - alapok",
+        photoshopDescription: "Concept Art, Sketching, Térképtervezés",
+        kritaDescription: "Concept Art, Sketching",
+
+        gameOtherSkills: {
+            cinematography: "Cinematography",
+            ruleOfThirds: "Rule of Thirds",
+            lighting: "Világítás",
+            composition: "Kompozíció",
+            blocking: "Jelenetelrendezés",
+            cameraAngles: "Kameraállások / Kamera szögek",
+
+            levelDesign: "Level Design",
+            blockout: "Blockout/Greybox",
+            psychologicalTriggers: "Pszichológiai Tényezők (Előfeszítés - Priming, Előrevetítés)",
+            layout: "Elrendezés",
+            environmentalStorytelling: "Környezeti Történetmesélés",
+            playerGuidance: "Játékos Útmutatás",
+
+            gameDesign: "Game Design",
+            mechanics: "Mechanikák",
+            gameDesignDocument: "Játékmenet-tervezési Dokumentáció (GDD)",
+            cognitiveBiases: "Kognitív Torzítások a Tervezésben (Előfeszítés, veszteségkerülés, kerethatás)",
+            prototyping: "Prototípus készítés",
+
+            storytelling: "Storytelling",
+            narrativeDesign: "Narratív Tervezés",
+            emotionalHooksAndPlayerEngagement: "Érzelmi Kapcsolódások és Játékos Elköteleződés",
+            characterDevelopment: "Karakterfejlődés",
+            worldBuilding: "Világépítés",
+
+            other: "Egyéb",
+            hardwareKnowledge: "Hardware-es ismeretek",
+            cybersecurityKnowledge: "Cybersecurity alapismeretek",
+            microsoftOffice: "Microsoft Office alkalmazások",
+        },
 
         // About page
         motivationTitle: 'Motiváció',
@@ -143,7 +189,7 @@ const messages = {
         otherSkillsAndKnowledge: 'Other Skills and Knowledge',
         basics: 'Basics',
 
-        otherSkills: {
+        webOtherSkills: {
             vue: "Vue",
             router: "Router",
             optionAPI: "Option API",
@@ -167,7 +213,7 @@ const messages = {
 
             other: "Other",
             hardware: "Hardware knowledge",
-            cybersecurity: "Basic cybersecurity",
+            cybersecurity: "Basic cybersecurity knowledge",
             microsoftOffice: "Microsoft Office applications",
         },
 
@@ -177,6 +223,44 @@ const messages = {
         narrativeAndGameplayDesign: 'Narrative and Gameplay Design',
         debuggingAndTranslation: 'Debugging and Translation',
         multiMediaAndContentCreation: 'Multimedia and Content Creation',
+        gaeaDescription: "Heightmap Generation - Basics",
+        pureRefDescription: "References and Design",
+        substancePainterDescription: "Texturing - Basics",
+        photoshopDescription: "Concept Art, Sketching, Level plan",
+        kritaDescription: "Concept Art, Sketching",
+
+        gameOtherSkills: {
+            title: "Cinematography",
+            ruleOfThirds: "Rule of Thirds",
+            lighting: "Lighting",
+            composition: "Composition",
+            blocking: "Blocking",
+            cameraAngles: "Camera Angles",
+
+            levelDesign: "Level Design",
+            blockout: "Blockout/Greybox",
+            psychologicalTriggers: "Psychological Triggers (Priming, Foreshadowing)",
+            layout: "Layout",
+            environmentalStorytelling: "Environmental Storytelling",
+            playerGuidance: "Player Guidance",
+
+            gameDesign: "Game Design",
+            mechanics: "Mechanics",
+            gameDesignDocument: "Game Design Documentation (GDD)",
+            cognitiveBiases: "Cognitive Biases in Design (Priming, Loss Aversion, Framing Effect)",
+            prototyping: "Prototyping",
+
+            storytelling: "Storytelling",
+            narrativeDesign: "Narrative Design",
+            emotionalHooksAndPlayerEngagement: "Emotional Hooks & Player Engagement",
+            characterDevelopment: "Character Development",
+            worldBuilding: "Worldbuilding",
+
+            other: "Other",
+            hardwareKnowledge: "Hardware knowledge",
+            cybersecurityKnowledge: "Basic Cybersecurity knowledge",
+            microsoftOffice: "Microsoft Office applications",
+        },
 
         // About page
         motivationTitle: 'Motivation',

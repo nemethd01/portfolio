@@ -19,7 +19,7 @@ import { useI18n } from 'vue-i18n';
 export default {
     data() {
         return {
-            otherSkills: [
+            webOtherSkills: [
                 {
                     title: "vue",
                     text: [
@@ -61,9 +61,9 @@ export default {
     computed: {
         translatedSkills() {
             const { t } = useI18n();
-            return this.otherSkills.map(skill => ({
-                title: t(`otherSkills.${skill.title}`),
-                text: skill.text.map(item => t(`otherSkills.${item}`))
+            return this.webOtherSkills.map(skill => ({
+                title: t(`webOtherSkills.${skill.title}`),
+                text: skill.text.map(item => t(`webOtherSkills.${item}`))
             }));
         }
     }

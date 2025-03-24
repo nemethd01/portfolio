@@ -11,12 +11,12 @@
             <div>
                 <h4>{{ $t('languagesAndTechnology') }}</h4>
                 <div class="skill-icon-container">
-                    <skill-icon name="C++" :icon="cppSvg" level="Alapok"/>
+                    <skill-icon name="C++" :icon="cppSvg" :level="$t('basics')"/>
                     <skill-icon name="JavaScript" :icon="jsSvg"/>
-                    <skill-icon name="Python" :icon="pythonSvg" level="Alapok"/>
+                    <skill-icon name="Python" :icon="pythonSvg" :level="$t('basics')"/>
                     <skill-icon name="PHP" :icon="phpSvg"/>
-                    <skill-icon name="Bash" :icon="bashSvg" level="Alapok"/>
-                    <skill-icon name="MariaDB (MySQL)" :icon="mariadbSvg"/>
+                    <skill-icon name="Bash" :icon="bashSvg" :level="$t('basics')"/>
+                    <skill-icon name="MariaDB (SQL)" :icon="mariadbSvg"/>
                 </div>
             </div>
 
@@ -31,12 +31,12 @@
 
             <h4>{{ $t('graphicAnd3d') }}</h4>
             <div class="skill-icon-container">
-                <skill-icon name="Blender" :icon="blenderSvg" level="Alapok"/>
-                <skill-icon name="Gaea" :icon="gaeaSvg" level="Heightmap Generálás - Alapok"/>
-                <skill-icon name="PureRef" :icon="purerefSvg" level="Referenciák és Tervezés"/>
-                <skill-icon name="Substance Painter" :icon="substancepainterSvg" level="Textúrázás - Alapok"/>
-                <skill-icon name="Photoshop" :icon="photoshopSvg" level="Concept Art, Sketching, Level plan"/>
-                <skill-icon name="Krita" :icon="kritaSvg" level="Concept Art, Sketching"/>
+                <skill-icon name="Blender" :icon="blenderSvg" :level="$t('basics')"/>
+                <skill-icon name="Gaea" :icon="gaeaSvg" :level="$t('gaeaDescription')"/>
+                <skill-icon name="PureRef" :icon="purerefSvg" :level="$t('pureRefDescription')"/>
+                <skill-icon name="Substance Painter" :icon="substancepainterSvg" :level="$t('substancePainterDescription')"/>
+                <skill-icon name="Photoshop" :icon="photoshopSvg" :level="$t('photoshopDescription')"/>
+                <skill-icon name="Krita" :icon="kritaSvg" :level="$t('kritaDescription')"/>
             </div>
 
             <h4>{{ $t('narrativeAndGameplayDesign') }}</h4>
@@ -49,8 +49,8 @@
             <div class="col-md-6">
                 <h4>{{ $t('debuggingAndTranslation') }}</h4>
                 <div class="skill-icon-container">
-                    <skill-icon name="x64dbg" :icon="x64dbgSvg" level="Alapok"/>
-                    <skill-icon name="CMake" :icon="cmakeSvg" level="Alapok"/>
+                    <skill-icon name="x64dbg" :icon="x64dbgSvg" :level="$t('basics')"/>
+                    <skill-icon name="CMake" :icon="cmakeSvg" :level="$t('basics')"/>
                     <skill-icon name="Docker" :icon="dockerSvg"/>
                     <skill-icon name="Oracle VirtualBox" :icon="virtualboxSvg"/>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="skill-icon-container">
                     <skill-icon name="Premiere Pro" :icon="premiereSvg"/>
                     <skill-icon name="DaVinci Resolve" :icon="davinciSvg"/>
-                    <skill-icon name="Ableton Live" :icon="abletonSvg" level="Alapok"/>
+                    <skill-icon name="Ableton Live" :icon="abletonSvg" :level="$t('basics')"/>
                     <skill-icon name="OBS Studio" :icon="obsSvg"/>
                 </div>
             </div>

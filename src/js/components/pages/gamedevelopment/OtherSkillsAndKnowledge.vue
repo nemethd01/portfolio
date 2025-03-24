@@ -1,6 +1,6 @@
 <template>
     <div class="row other-skills game-other-skills">
-        <div class="col-md-4 col-sm-12" v-for="(skill, index) in otherSkills" :key="index">
+        <div class="col-md-4 col-sm-12" v-for="(skill, index) in translatedSkills" :key="index">
             <div class="card skill-card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ skill.title }}</h5>
@@ -14,57 +14,68 @@
 </template>
 
 <script>
+import { useI18n } from 'vue-i18n';
+
 export default {
     data() {
         return {
-            otherSkills: [
+            gameOtherSkills: [
                 {
-                    title: "Cinematography",
+                    title: "cinematography",
                     text: [
-                        "Rule of Thirds",
-                        "Lighting",
-                        "Composition",
-                        "Blocking",
-                        "Camera Angles",
+                        "ruleOfThirds",
+                        "lighting",
+                        "composition",
+                        "blocking",
+                        "cameraAngles",
                     ]
                 },
                 {
-                    title: "Level Design",
+                    title: "levelDesign",
                     text: [
-                        "Blockout/Greybox",
-                        "Psychological Triggers (Priming, Foreshadowing)",
-                        "Layout",
-                        "Environmental Storytelling",
-                        "Player Guidance",
+                        "blockout",
+                        "psychologicalTriggers",
+                        "layout",
+                        "environmentalStorytelling",
+                        "playerGuidance",
                     ]
                 },
                 {
-                    title: "Game Design",
+                    title: "gameDesign",
                     text: [
-                        "Mechanics",
-                        "Game Design Documentation (GDD)",
-                        "Cognitive Biases in Design (Priming, Loss Aversion, Framing Effect)\"",
-                        "Prototyping"
+                        "mechanics",
+                        "gameDesignDocument",
+                        "cognitiveBiases",
+                        "prototyping"
                     ]
                 },
                 {
-                    title: "Storytelling",
+                    title: "storytelling",
                     text: [
-                        "Narrative Design",
-                        "Emotional Hooks & Player Engagement",
-                        "Character Development",
-                        "Worldbuilding"
+                        "narrativeDesign",
+                        "emotionalHooksAndPlayerEngagement",
+                        "characterDevelopment",
+                        "worldBuilding"
                     ]
                 },
                 {
-                    title: "Egyéb",
+                    title: "other",
                     text: [
-                        "Hardware-es ismeretek",
-                        "Cybersecurity alapismeretek",
-                        "Microsoft Office alkalmazások",
+                        "hardwareKnowledge",
+                        "cybersecurityKnowledge",
+                        "microsoftOffice",
                     ]
                 },
             ],
+        }
+    },
+    computed: {
+        translatedSkills() {
+            const { t } = useI18n();
+            return this.gameOtherSkills.map(skill => ({
+                title: t(`gameOtherSkills.${skill.title}`),
+                text: skill.text.map(item => t(`gameOtherSkills.${item}`))
+            }));
         }
     }
 }

@@ -320,7 +320,7 @@
 }
 
 .web-other-skills .skill-card:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgb(26, 37, 43);
 }
 
@@ -444,7 +444,7 @@
 }
 
 .game-other-skills .skill-card:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgb(27, 6, 6);
 }
 
