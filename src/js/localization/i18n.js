@@ -21,6 +21,11 @@ const messages = {
 
         // Projects common
         projectsHeaderTitle: 'Projektek',
+        viewOnGitHub: 'Nézd meg GitHubon',
+        projectFeatures: 'Projekt funkciók',
+        developmentProcess: 'Fejlesztési folyamat',
+        screenshots: 'Képernyőképek',
+        technologiesUsed: "Használt technológiák",
 
         // Web Development Page
         languagesAndTechnology: 'Programozási nyelvek és Technológiák',
@@ -67,6 +72,30 @@ const messages = {
             numbersToStringsTitle: "Számok kiírása string-el",
             calcAndRandomNumberTitle: "Számológép és random szám generátor PHP-vel",
         },
+        // WP - QueueSchedule
+        WPQueueHeading: "Beosztás megjelenítő napi és heti nézetben, lefedettségi időszak jelzéssel",
+        WPQueueDevProcess1: "A beosztás lefedettséget megjelenítő projekt egy kérésre készült. Az igény egy olyan heti és napi nézetben is elérhető táblázatra irányult, ami képes megfelelően kezelni a dolgozók készenléti beosztását, pontosan és átláthatóan megjeleníti az adott idő intervallumot, bármilyen jelenleg meglévő (legacy és modern) webes felületre beilleszthető legyen, valamint láthatóak a lefedett és üres idő intervallumok.\n" +
+            "Első lépésként Figma-ban készítettem egy látványtervet az igénylő elképzelései alapján, majd ennek prezentálása után neki láttam a dinamikus táblázat létrehozásának.",
+        WPQueueDevProcess2: "A dolgozók beosztásai megjelenítésére kék háttérszínű kártyákat hoztam létre, amelyek a kezdőidőpont napján, megfelelő helyen és szélességben jelennek meg.\n" +
+            "Problémaként merült fel, hogy a rövidebb időszakokra vonatkozó beosztások heti nézetben kisebb képernyőkön nem fértek ki megfelelően. Ezt a problémát az alábbi CSS megoldással kezeltem:",
+        WPQueueDevProcess3: "Amint a \"@container\" érzékeli, hogy a kártya 40px-nél kisebbre szűkül (tehát a kezdő és a befejező időpont már nem fér bele jól olvashatóan), elrejti először a string-két megjelenő időpontokat, majd 10px alatt a megjelenő svg ikonokat is eltünteti. Ezek az elemek \":hover\" eseményre jelennek meg újra, biztosítva az olvashatóságot.",
+        WPQueueDevProcess4: "A legnagyobb kihívást a megfelelő dátumkezelés jelentette számomra, amit JavaScript Date objektummal valósítottam meg.\n" +
+            "A heti és napi nézet közötti váltás, az aktuális dátum kiemelése, valamint az előző és következő időszakok közötti navigáció pontos működése érdekében megfelelő logikát kellett kialakítani.\n" +
+            "A rendszerben az aktuális dátumhoz viszonyítva számítódnak ki a hét napjai. Például a heti nézetben a hétfő mindig az adott hét első napja, míg a napi nézetben kizárólag az adott nap kerül kijelölésre. Ehhez az alábbi módszert alkalmaztam:",
+        WPQueueDevProcess5: "Ez a függvény biztosítja, hogy a hét kezdőnapja mindig hétfő legyen, még akkor is, ha a hét bármely más napján hívjuk meg. Az így kapott kezdődátum alapján generálódik a teljes heti nézet.",
+        WPQueueDevProcess6: "A napi nézet esetén az adott naphoz rendelt beosztások kerülnek kiemelésre. Az aktuális dátum kiemelésére külön osztályt alkalmaztam, így vizuálisan is azonnal felismerhető a mai nap:",
+        WPQueueDevProcess7: "Ezzel a megoldással az aktuális nap oszlopa automatikusan kiemelődik a táblázatban.",
+        WPQueueFeatures: {
+            dailyAndWeeklyView: "Napi és heti nézet",
+            timePeriodNavigation: "Időszak léptetés előre és hátra",
+            resetTodayButton: "Vissza állítás a mai napra gomb",
+            integratableIntoAnySystem: "Bármilyen meglévő rendszerbe beilleszthető",
+            dataFromJsArray: "Az adatok egy JavaScript fájlból érkező tömbből származnak, így bármilyen struktúrált eseménylistát képes kezelni",
+            highlightCurrentDay: "Aktuális nap kiemelve",
+            displayCoveredPeriods: "Lefedett és lefedetlen időszakok megjelenítése",
+            hoverOnSmallScreens: "Kis képernyőn \":hover\"-re megjelenő időpontok",
+        },
+
 
         // Game Development Page
         gameEngine: 'Játék motor',
@@ -178,6 +207,11 @@ const messages = {
 
         // Projects common
         projectsHeaderTitle: 'Projects',
+        viewOnGitHub: 'View on GitHub',
+        projectFeatures: 'Project Features',
+        developmentProcess: 'Development Process',
+        screenshots: 'Screenshots',
+        technologiesUsed: "Technologies Used",
 
         // Web Development Page
         languagesAndTechnology: 'Programming Languages and Technologies',
@@ -215,6 +249,37 @@ const messages = {
             hardware: "Hardware knowledge",
             cybersecurity: "Basic cybersecurity knowledge",
             microsoftOffice: "Microsoft Office applications",
+        },
+
+        webProjects: {
+            queueScheduleTitle: "Schedule calendar with coverage indicators",
+            kioskTitle: "Customer Information Kiosk",
+            fileManagerTitle: "File Manager",
+            numbersToStringsTitle: "Displaying numbers as a string",
+            calcAndRandomNumberTitle: "Calculator and random number generator with PHP",
+        },
+        // WP - QueueSchedule
+        WPQueueHeading: "Schedule Display in Daily and Weekly Views with Coverage Period Indicators",
+        WPQueueDevProcess1: "The project displaying the schedule coverage was created upon request. The requirement was for a table available in both weekly and daily views, capable of properly handling employee on-call schedules, displaying the time intervals accurately and transparently, and being able to integrate into any currently existing (legacy and modern) web interface. It was also important to display both covered and empty time intervals.\n" +
+            "As the first step, I created a mockup in Figma based on the client's specifications, and after presenting it, I started building the dynamic table.",
+        WPQueueDevProcess2: "For displaying employee schedules, I created cards with a blue background, which appear on the starting time's day, in the appropriate position and width.\n" +
+            "A problem arose where schedules for shorter periods did not fit properly on smaller screens in the weekly view. I handled this issue with the following CSS solution:",
+        WPQueueDevProcess3: "As soon as the \"@container\" detects that the card narrows to below 40px (meaning the start and end times can no longer fit in a readable way), it first hides the time displayed as a string, and then, when the width reaches below 10px, the SVG icons are also hidden. These elements reappear on a \":hover\" event, ensuring readability.",
+        WPQueueDevProcess4: "The biggest challenge for me was handling dates properly, which I implemented using the JavaScript Date object.\n" +
+            "To ensure proper functioning of the switch between weekly and daily views, highlighting the current date, and navigating between the previous and next periods, I had to implement the correct logic.\n" +
+            "The days of the week are calculated based on the current date. For example, in the weekly view, Monday is always the first day of the week, while in the daily view, only the selected day is highlighted. I used the following method for this:",
+        WPQueueDevProcess5: "This function ensures that the start of the week is always Monday, even if called on any other day of the week. The full weekly view is generated based on this start date.",
+        WPQueueDevProcess6: "For the daily view, the schedules for the selected day are highlighted. To highlight the current date, I applied a special class, so visually, today’s date can be immediately identified:",
+        WPQueueDevProcess7: "With this solution, the column for the current day is automatically highlighted in the table.",
+        WPQueueFeatures: {
+            dailyAndWeeklyView: "Daily and weekly view",
+            timePeriodNavigation: "Navigate time period forward and backward",
+            resetTodayButton: "Reset to today button",
+            integratableIntoAnySystem: "Integratable into any existing system",
+            dataFromJsArray: "The data comes from an array in a JavaScript file, so it can handle any structured event list",
+            highlightCurrentDay: "Highlight current day",
+            displayCoveredPeriods: "Display covered and uncovered periods",
+            hoverOnSmallScreens: "Hover tooltips on small screens",
         },
 
         // Game Development Page

@@ -4,7 +4,7 @@
         <div class="card web-card d-flex flex-row align-items-center mb-3">
             <img :src="projectImage" :class="[imgClasses]" alt="Project Image">
             <div :class="[cardBodyClasses]">
-                <h5 class="card-title">{{ projectName }}</h5>
+                <h5 class="card-title">{{ projectTitle }}</h5>
                 <p :class="['card-text', 'fst-italic', cardTextClasses]">{{ projectTechnologies }}</p>
             </div>
         </div>
@@ -15,7 +15,7 @@
 <script>
 export default {
     props: {
-        projectName: {
+        projectTitle: {
             type: String,
             default: "Example"
         },

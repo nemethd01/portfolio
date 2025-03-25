@@ -1,27 +1,29 @@
 <template>
     <div class="web-projects-page">
         <div class="header">
-            <h1>Beosztás naptár lefedettség jelzéssel</h1>
-            <p>Beosztás megjelenítő napi és heti nézetben, lefedettségi időszak jelzéssel</p>
-            <a href="https://github.com/nemethd01/QueueSchedule.git" target="_blank" class="btn custom-button">Nézd meg GitHubon</a>
+            <h1>{{ $t('webProjects.queueScheduleTitle') }}</h1>
+            <p>{{ $t('WPQueueHeading') }}</p>
+            <a href="https://github.com/nemethd01/QueueSchedule.git" target="_blank" class="btn custom-button">{{
+                    $t('viewOnGitHub')
+                }}</a>
         </div>
         <div class="project-content-wrapper">
             <div class="container">
                 <div class="container py-5">
-                    <h3 class="mb-3">Projekt funkciók</h3>
+                    <h3 class="mb-3">{{ $t('projectFeatures') }}</h3>
                     <div class="row align-items-center">
                         <div class="col-12 col-md-7 text-center">
                             <a :href="Queue_main" class="glightbox">
                                 <img
                                     :src="Queue_main"
-                                    alt="Beosztás és lefedettség jelölő táblázat"
+                                    alt="Schedule calendar with coverage indicators"
                                     class="img-fluid rounded shadow-lg project-img"
                                 />
                             </a>
                         </div>
                         <div class="col-12 col-md-5">
                             <ul class="list-group project-glass-list">
-                                <li v-for="(item, index) in features" :key="index" class="list-group-item">
+                                <li v-for="(item, index) in translatedFeatures" :key="index" class="list-group-item">
                                     <span class="list-group-index">#{{ index + 1 }}</span> {{ item }}
                                 </li>
                             </ul>
@@ -32,15 +34,13 @@
                         <tech-section/>
                     </div>
                     <div class="row py-4">
-                        <h3 class="mb-3">Fejlesztési folyamat</h3>
+                        <h3 class="mb-3">{{ $t('developmentProcess') }}</h3>
                         <div class="development-process-text">
                             <div class="mb-2">
-                                A beosztás lefedettséget megjelenítő projekt egy kérésre készült. Az igény egy olyan heti és napi nézetben is elérhető táblázatra irányult, ami képes megfelelően kezelni a dolgozók készenléti beosztását, pontosan és átláthatóan megjeleníti az adott idő intervallumot, bármilyen jelenleg meglévő (legacy és modern) webes felületre beilleszthető legyen, valamint láthatóak a lefedett és üres idő intervallumok.
-                                Első lépésként Figma-ban készítettem egy látványtervet az igénylő elképzelései alapján, majd ennek prezentálása után neki láttam a dinamikus táblázat létrehozásának.
+                                {{ $t('WPQueueDevProcess1') }}
                             </div>
                             <div class="mb-2">
-                                A dolgozók beosztásai megjelenítésére kék háttérszínű kártyákat hoztam létre, amelyek a kezdőidőpont napján, megfelelő helyen és szélességben jelennek meg.
-                                Problémaként merült fel, hogy a rövidebb időszakokra vonatkozó beosztások heti nézetben kisebb képernyőkön nem fértek ki megfelelően. Ezt a problémát az alábbi CSS megoldással kezeltem:
+                                {{ $t('WPQueueDevProcess2') }}
                             </div>
                             <div class="mb-2">
                                 <div class="code-block">
@@ -58,12 +58,10 @@
                                 </div>
                             </div>
                             <div class="mb-2">
-                                Amint a "@container" érzékeli, hogy a kártya 40px-nél kisebbre szűkül (tehát a kezdő és a befejező időpont már nem fér bele jól olvashatóan), elrejti először a string-két megjelenő időpontokat, majd 10px alatt a megjelenő svg ikonokat is eltünteti. Ezek az elemek ":hover" eseményre jelennek meg újra, biztosítva az olvashatóságot.
+                                {{ $t('WPQueueDevProcess3') }}
                             </div>
                             <div class="mb-2">
-                                A legnagyobb kihívást a megfelelő dátumkezelés jelentette számomra, amit JavaScript Date objektummal valósítottam meg.
-                                A heti és napi nézet közötti váltás, az aktuális dátum kiemelése, valamint az előző és következő időszakok közötti navigáció pontos működése érdekében megfelelő logikát kellett kialakítani.
-                                A rendszerben az aktuális dátumhoz viszonyítva számítódnak ki a hét napjai. Például a heti nézetben a hétfő mindig az adott hét első napja, míg a napi nézetben kizárólag az adott nap kerül kijelölésre. Ehhez az alábbi módszert alkalmaztam:
+                                {{ $t('WPQueueDevProcess4') }}
                             </div>
                             <div class="mb-2">
                                 <div class="code-block">
@@ -75,10 +73,10 @@
                                 </div>
                             </div>
                             <div class="mb-2">
-                                Ez a függvény biztosítja, hogy a hét kezdőnapja mindig hétfő legyen, még akkor is, ha a hét bármely más napján hívjuk meg. Az így kapott kezdődátum alapján generálódik a teljes heti nézet.
+                                {{ $t('WPQueueDevProcess5') }}
                             </div>
                             <div class="mb-2">
-                                A napi nézet esetén az adott naphoz rendelt beosztások kerülnek kiemelésre. Az aktuális dátum kiemelésére külön osztályt alkalmaztam, így vizuálisan is azonnal felismerhető a mai nap:
+                                {{ $t('WPQueueDevProcess6') }}
                             </div>
                             <div class="mb-2">
                                 <div class="code-block">
@@ -93,13 +91,13 @@
                                 </div>
                             </div>
                             <div class="mb-2">
-                                Ezzel a megoldással az aktuális nap oszlopa automatikusan kiemelődik a táblázatban.
+                                {{ $t('WPQueueDevProcess7') }}
                             </div>
                         </div>
                     </div>
                     <!-- Screenshots -->
                     <div class="row mb-5 py-4">
-                        <h3 class="mb-5">Képernyőképek</h3>
+                        <h3 class="mb-5">{{ $t('screenshots') }}</h3>
                         <div class="row justify-content-center">
                             <div v-for="(image, index) in images" :key="index" class="col-md-4 col-sm-6 mb-4">
                                 <a :href="image.src" class="glightbox" :data-gallery="'gallery1'">
@@ -109,7 +107,9 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="https://github.com/nemethd01/QueueSchedule.git" target="_blank" class="btn custom-button">Nézd meg GitHubon</a>
+                        <a href="https://github.com/nemethd01/QueueSchedule.git" target="_blank" class="btn custom-button">{{
+                                $t('viewOnGitHub')
+                            }}</a>
                     </div>
                 </div>
             </div>
@@ -146,17 +146,22 @@ export default {
         return {
             Queue_main,
             features: [
-                "Napi és heti nézet",
-                "Időszak léptetés előre és hátra",
-                "Vissza állítás a mai napra gomb",
-                "Bármilyen meglévő rendszerbe beilleszthető",
-                "Az adatok egy JavaScript fájlból érkező tömbből származnak, így bármilyen struktúrált eseménylistát képes kezelni",
-                "Aktuáls nap kiemelve",
-                "Lefedett és lefedetlen időszakok megjelenítése",
-                "Kis képernyőn \":hover\"-re megjelenő időpontok",
+                "dailyAndWeeklyView",
+                "timePeriodNavigation",
+                "resetTodayButton",
+                "integratableIntoAnySystem",
+                "dataFromJsArray",
+                "highlightCurrentDay",
+                "displayCoveredPeriods",
+                "hoverOnSmallScreens"
             ],
         };
     },
+    computed: {
+        translatedFeatures() {
+            return this.features.map(feature => this.$t(`WPQueueFeatures.${feature}`));
+        }
+    }
 }
 </script>
 

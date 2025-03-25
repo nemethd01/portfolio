@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import { useI18n } from 'vue-i18n';
-
 export default {
     data() {
         return {
@@ -60,10 +58,9 @@ export default {
     },
     computed: {
         translatedSkills() {
-            const { t } = useI18n();
             return this.webOtherSkills.map(skill => ({
-                title: t(`webOtherSkills.${skill.title}`),
-                text: skill.text.map(item => t(`webOtherSkills.${item}`))
+                title: this.$t(`webOtherSkills.${skill.title}`),
+                text: skill.text.map(item => this.$t(`webOtherSkills.${item}`))
             }));
         }
     }
