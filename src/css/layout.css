@@ -69,13 +69,17 @@
     padding: 15px;
 }
 
+.web-projects-page .tech-section {
+    margin-top: 5rem;
+}
+
 .list-group-index {
     color: cyan;
     font-weight: bold;
     margin-right: 10px;
 }
 
-/* COde block */
+/* Code block */
 
 .code-block {
     width: 75%;

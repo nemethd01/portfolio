@@ -16,7 +16,8 @@
                     <skill-icon name="Python" :icon="pythonSvg" :level="$t('basics')"/>
                     <skill-icon name="PHP" :icon="phpSvg"/>
                     <skill-icon name="Bash" :icon="bashSvg" :level="$t('basics')"/>
-                    <skill-icon name="MariaDB (SQL)" :icon="mariadbSvg"/>
+                    <skill-icon name="MariaDB" :icon="mariadbSvg"/>
+                    <skill-icon name="MySQL" :icon="mysqlSvg"/>
                 </div>
             </div>
 
@@ -136,6 +137,7 @@ import purerefSvg from "../../svg/pureref.vue";
 import abletonSvg from "../../svg/ableton.vue";
 import obsSvg from "../../svg/obs.vue";
 import gitlabSvg from "../../svg/gitlab.vue";
+import mysqlSvg from "../../svg/sql.vue";
 
 
 export default {
@@ -181,7 +183,8 @@ export default {
             purerefSvg,
             abletonSvg,
             obsSvg,
-            gitlabSvg
+            gitlabSvg,
+            mysqlSvg,
         };
     }
 }

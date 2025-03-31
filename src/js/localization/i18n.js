@@ -72,7 +72,7 @@ const messages = {
             numbersToStringsTitle: "Számok kiírása string-el",
             calcAndRandomNumberTitle: "Számológép és random szám generátor PHP-vel",
         },
-        // WP - QueueSchedule
+        // WebP - QueueSchedule
         WPQueueHeading: "Beosztás megjelenítő napi és heti nézetben, lefedettségi időszak jelzéssel",
         WPQueueDevProcess1: "A beosztás lefedettséget megjelenítő projekt egy kérésre készült. Az igény egy olyan heti és napi nézetben is elérhető táblázatra irányult, ami képes megfelelően kezelni a dolgozók készenléti beosztását, pontosan és átláthatóan megjeleníti az adott idő intervallumot, bármilyen jelenleg meglévő (legacy és modern) webes felületre beilleszthető legyen, valamint láthatóak a lefedett és üres idő intervallumok.\n" +
             "Első lépésként Figma-ban készítettem egy látványtervet az igénylő elképzelései alapján, majd ennek prezentálása után neki láttam a dinamikus táblázat létrehozásának.",
@@ -95,7 +95,57 @@ const messages = {
             displayCoveredPeriods: "Lefedett és lefedetlen időszakok megjelenítése",
             hoverOnSmallScreens: "Kis képernyőn \":hover\"-re megjelenő időpontok",
         },
-
+        // WebP - Customer Information Kiosk
+        WPKioskHeading: "Érintőképernyős vásárlói tájékoztató Raspberry Pi-re",
+        WPKioskDevProcess1: "A projekt célja egy érintőképernyős, webes alapú vásárlói tájékoztató létrehozása volt Raspberry Pi alapokon, amelyet később az ügyfélszolgálati irodákban helyeztek el.\n" +
+            "A rendszer kizárólag a megadott információk megjelenítésére szolgál, nem engedi a felhasználóknak, hogy külső oldalakra navigáljanak vagy az eszköz operációs rendszeréhez hozzáférjenek.\n" +
+            "A felületet VUE és Tailwind CSS segítségével építettem fel.",
+        WPKioskDevProcess2: "A főoldalra egy folyamatosan futó, egyedi háttérvideót készítettem, amit a ZNET Telekom meglévő videóiból állítottam össze 30 másodpercben.\n" +
+            "A kiosk létrehozása közben több olyan problémába is belebotlottam, amik megoldásával sokat tanultam mind a böngésző, mind a Raspbian OS rendszerről.",
+        WPKioskDevProcess3: "Többek között: fontos volt, hogy a felhasználó ne tudja semmilyen körülmények között elhagyni a kiosk felületét. A PDF-ekben található :mailto linkek (e-mail címek) és az egyéb külső oldalakra mutató linkek azonban ezt nem tették lehetővé, ezért elő kellett állnom egy megoldással.\n" +
+            "A mailto linkek tiltására Írtam egy bash scriptet, ami megakadályozza, hogy a Chromium böngészőből e-mail kliens nyíljon meg, így a felhasználók nem tudnak külső programokat elérni.\n" +
+            "A külső weboldalak megnyílása egy öszetettebb probléma volt, így összetettebb megoldást is igényelt. JavaScript alapokon készítettem egy saját Chrome extensiont, amely tilt minden olyan próbálkozást, ami egy másik weboldal megnyitására irányul. Ha ilyen történne, a rendszer azonnal visszanavigál a főoldalra.",
+        WPKioskDevProcess4: "Az oldalak adatainak többsége egy könnyen hozzáférhető külső JavaScript tömbből töltődik.",
+        WPKioskDevProcess5: "Mivel érintőképernyős, fizikai billentyűzet nélüli rendszerre kellett tervezni, ezért szükség volt a panaszkezelési \"form\" miatt beépíteni egy moduláris virtuális billentyűzetet, ami kompatibilis VUE-vel. Erre a célra legalkalmasabb megoldás volt a ",
+        WPKioskDevProcess6: "A panaszkezelés \"form\" validációval van ellátva. A küldés gomb megnyomásával Axios kéréssel API-n keresztül kommunikál a weboldal megfelelő backend szegmensével.",
+        WPKioskDevProcess7: "Kérés volt az ügyfélszolgálat felől az is, hogy ha az ügyfelek használat után otthagyják a kioskokat, akkor egy bizonyos idő után álljanak vissza alapállapotba.\n" +
+            "Ezért, úgy hozam létre a projektet, hogy az oldal 15 perc inaktivitás után automatikusan visszatér a főoldalra.",
+        WPKioskFeatures: {
+            informationTransfer: "Információ átadás",
+            termsAndConditions: "ÁSZF megtekintése",
+            complaintManagement: "Panaszkezelés",
+            validatedInputs: "Validált beviteli mezők",
+            mailtoDisabled: ":mailTo linkek letiltva",
+            chromeExtension: "Egyedi Chrome Extension a navigáció és a megnyíló oldalak korlátozására",
+            backgroundVideo: "Saját készítésű háttérvideó",
+            pdfModal: "PDF dokumentumok megnyitása modálban",
+            returnToHome: "Automatikus visszaállás főoldalra",
+            kioskBoard: "Beépített virtuális billentyűzet (KioskBoard)",
+            touchOptimized: "Érintésre optimalizált UI"
+        },
+        // WebP - FileManager
+        WPFileManagerHeading: "Egyszerű és modern fájlkezelő Vue + PHP alapokon.",
+        WPFileManagerDevProcess1: "A File Manager projektem elsősorban PHP tanulási céllal készült. Megismerkedtem az objektum-orientált programozás (OOP) alapjaival, valamint az MVC-vel és a PDO-val, miközben az alkalmazás backend-jét fejlesztettem.\n" +
+            "A projekt frontend Vue.js alapú, a backend pedig PHP-ban készült. Az MVC architektúra segített abban, hogy kód egyes részeit jól elkülöníthessem, ezzel tisztábbá és olvashatóbbá téve azt.",
+        WPFileManagerDevProcess2: "Az alkalmazás létrehozásakor a célom az volt, hogy egy egyszerű fájlkezelő rendszert hozzak létre, ami lehetővé teszi a felhasználók számára a fájlok feltöltését, letöltését, valamint mappák kezelését (létrehozás, törlés).\n" +
+            "A fájlok feltöltését több részből álló chunk-alapú feltöltési megoldással valósítottam meg, amelyet a FileController osztály kezeli.\n" +
+            "Emellett a mappák megfelelő kezelése is fontos része a projektnek, amit a FolderController osztály biztosít.",
+        WPFileManagerDevProcess3: "A fájlok kezelését egy adatbázis-alapú megoldás biztosítja, amely a fájlok nevét, méretét és egyedi azonosítóját tárolja.\n" +
+            "Az adatbázis kapcsolatot a DB.php fájlban hoztam létre, ami PDO-t használ.",
+        WPFileManagerDevProcess4: "A projekt készítése során ismerkedtem meg a PDO-val, amely segített a biztonságos adatbázis-műveletek végrehajtásában. A PDO biztosítja a SQL injection elleni védelmet.",
+        WPFileManagerFeatures: {
+            fileManagement: "Fájlkezelés",
+            uploadAndDelete: "Fájl feltöltés és törlése",
+            folderManagement: "Mappa létrehozása és törlése",
+            navigationInFolders: "Mappákon belüli navigáció",
+            sorting: "Rendezés név és dátum szerint",
+            separatedFilesAndFolders: "Fájlok és mappák elválasztva",
+            currentLevel: "Aktuális mappaszint (navigációs útvonal)",
+            validatedInputs: "Validált beviteli mezők",
+            uploadSeparation: "Feltöltött fájlok feltöltési idő szerint külön mappákban elválasztva (backend)",
+            oopAndMvc: "OOP - MVC",
+            autoload: "PHP autoload",
+        },
 
         // Game Development Page
         gameEngine: 'Játék motor',
@@ -258,7 +308,7 @@ const messages = {
             numbersToStringsTitle: "Displaying numbers as a string",
             calcAndRandomNumberTitle: "Calculator and random number generator with PHP",
         },
-        // WP - QueueSchedule
+        // WebP - QueueSchedule
         WPQueueHeading: "Schedule Display in Daily and Weekly Views with Coverage Period Indicators",
         WPQueueDevProcess1: "The project displaying the schedule coverage was created upon request. The requirement was for a table available in both weekly and daily views, capable of properly handling employee on-call schedules, displaying the time intervals accurately and transparently, and being able to integrate into any currently existing (legacy and modern) web interface. It was also important to display both covered and empty time intervals.\n" +
             "As the first step, I created a mockup in Figma based on the client's specifications, and after presenting it, I started building the dynamic table.",
@@ -280,6 +330,57 @@ const messages = {
             highlightCurrentDay: "Highlight current day",
             displayCoveredPeriods: "Display covered and uncovered periods",
             hoverOnSmallScreens: "Hover tooltips on small screens",
+        },
+        // WebP - Customer Information Kiosk
+        WPKioskHeading: "Touchscreen customer information system for Raspberry Pi",
+        WPKioskDevProcess1: "The aim of the project was to create a touchscreen, web-based customer information system based on Raspberry Pi, which was later placed in customer service offices.\n" +
+            "The system is solely intended for displaying the provided information and does not allow users to navigate to external websites or access the device's operating system.\n" +
+            "I built the interface using VUE and Tailwind CSS.",
+        WPKioskDevProcess2: "I created a continuously running custom background video for the homepage, which I compiled from existing videos of ZNET Telekom, lasting 30 seconds.\n" +
+            "While creating the kiosk, I encountered several issues, the resolution of which taught me a lot about both the browser and the Raspbian OS.",
+        WPKioskDevProcess3: "Among other things, it was important that the user should not be able to leave the kiosk interface under any circumstances. However, the :mailto links (email addresses) and other links pointing to external websites in the PDFs did not allow this, so I had to come up with a solution.\n" +
+            "To block mailto links, I wrote a bash script that prevents the Chromium browser from opening the email client, so users cannot access external programs.\n" +
+            "Opening external websites was a more complex issue, so it required a more sophisticated solution. I created my own Chrome extension based on JavaScript, which blocks any attempts to open another website. If this happens, the system immediately navigates back to the homepage.",
+        WPKioskDevProcess4: "Most of the page data is loaded from an easily accessible external JavaScript array.",
+        WPKioskDevProcess5: "Since the system had to be designed for a touchscreen, without a physical keyboard, it was necessary to integrate a modular virtual keyboard for the complaint management form, which is compatible with VUE. The most suitable option for this purpose was ",
+        WPKioskDevProcess6: "The complaint management system is equipped with form validation. By pressing the submit button, the system communicates with the appropriate backend segment of the website through an API using an Axios request.",
+        WPKioskDevProcess7: "The customer service also requested that if customers leave the kiosks after use, the system should revert to its default state after a certain amount of time.\n" +
+            "Therefore, I designed the project so that the page automatically returns to the homepage after 15 minutes of inactivity.",
+        WPKioskFeatures: {
+            informationTransfer: "Information transfer",
+            termsAndConditions: "View Terms and Conditions",
+            complaintManagement: "Complaint management",
+            validatedInputs: "Validated input fields",
+            mailtoDisabled: ":mailTo links disabled",
+            chromeExtension: "Custom Chrome Extension to restrict navigation and opened pages",
+            backgroundVideo: "Custom background video",
+            pdfModal: "Opening PDF documents in a modal",
+            returnToHome: "Automatic return to homepage",
+            kioskBoard: "Built-in virtual keyboard (KioskBoard)",
+            touchOptimized: "Touch-optimized UI"
+        },
+        // WebP - FileManager
+        WPFileManagerHeading: "Simple and modern file manager based on Vue + PHP.",
+        WPFileManagerDevProcess1: "My File Manager project was primarily created for learning PHP. I became familiar with the basics of object-oriented programming (OOP), as well as MVC and PDO, while developing the application's backend.\n" +
+            "The project’s frontend is based on Vue.js, while the backend was developed in PHP. The MVC architecture helped me separate different parts of the code, making it cleaner and more readable.",
+        WPFileManagerDevProcess2: "When creating the application, my goal was to build a simple file management system that allows users to upload, download files, and manage folders (create, delete).\n" +
+            "I implemented the file upload using a chunk-based solution, which is managed by the FileController class.\n" +
+            "Proper folder management is also an important part of the project, which is handled by the FolderController class.",
+        WPFileManagerDevProcess3: "The management of files is handled by a database-based solution that stores the files' names, sizes, and unique identifiers.\n" +
+            "The database connection is established in the DB.php file, which uses PDO.",
+        WPFileManagerDevProcess4: "During the project development, I became familiar with PDO, which helped me perform secure database operations. PDO provides protection against SQL injection.",
+        WPFileManagerFeatures: {
+            fileManagement: "File management",
+            uploadAndDelete: "File upload and deletion",
+            folderManagement: "Create and delete folder",
+            navigationInFolders: "Navigation within folders",
+            sorting: "Sorting by name and date",
+            separatedFilesAndFolders: "Files and folders separated",
+            currentLevel: "Current folder level (navigation path)",
+            validatedInputs: "Validated input fields",
+            uploadSeparation: "Uploaded files separated into different folders by upload time (backend)",
+            oopAndMvc: "OOP - MVC",
+            autoload: "PHP autoload",
         },
 
         // Game Development Page

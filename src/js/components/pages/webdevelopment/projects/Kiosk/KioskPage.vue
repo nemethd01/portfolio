@@ -1,69 +1,68 @@
 <template>
     <div class="web-projects-page">
         <div class="header">
-            <h1>Vásárlói Tájékoztató Kiosk</h1>
-            <p>Érintőképernyős vásárlói tájékoztató Raspberry Pi-re</p>
+            <h1>{{ $t('webProjects.kioskTitle') }}</h1>
+            <p>{{ $t('WPKioskHeading') }}</p>
         </div>
         <div class="project-content-wrapper">
             <div class="container">
                 <div class="container py-5">
-                    <h3 class="mb-3">Projekt funkciók</h3>
+                    <h3 class="mb-3">{{ $t('projectFeatures') }}</h3>
                     <div class="row align-items-center">
-                        <div class="col-12 col-md-7 text-center">
-                            <a :href="kiosk_main" class="glightbox">
-                                <img
-                                    :src="kiosk_main"
-                                    alt="Kiosk"
-                                    class="img-fluid rounded shadow-lg project-img"
-                                />
-                            </a>
+                        <div class="col-12 col-md-7">
+                            <div class="text-center">
+                                <a :href="kiosk_main" class="glightbox">
+                                    <img
+                                        :src="kiosk_main"
+                                        alt="Kiosk"
+                                        class="img-fluid rounded shadow-lg project-img"
+                                    />
+                                </a>
+                            </div>
+
+                            <!-- Used Technologies -->
+                            <div class="row tech-section">
+                                <tech-section/>
+                            </div>
                         </div>
                         <div class="col-12 col-md-5">
                             <ul class="list-group project-glass-list">
-                                <li v-for="(item, index) in features" :key="index" class="list-group-item">
+                                <li v-for="(item, index) in translatedFeatures" :key="index" class="list-group-item">
                                     <span class="list-group-index">#{{ index + 1 }}</span> {{ item }}
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Used Technologies -->
+
                     <div class="row py-4">
-                        <tech-section/>
-                    </div>
-                    <div class="row py-4">
-                        <h3 class="mb-3">Fejlesztési folyamat</h3>
+                        <h3 class="mb-3">{{ $t('developmentProcess') }}</h3>
                         <div class="development-process-text">
-                            <div class="mb-2">A projekt célja egy érintőképernyős, webes alapú vásárlói tájékoztató létrehozása volt Raspberry Pi alapokon, amelyet később az ügyfélszolgálati irodákban helyeztek el.
-                                A rendszer kizárólag a megadott információk megjelenítésére szolgál, nem engedi a felhasználóknak, hogy külső oldalakra navigáljanak vagy az eszköz operációs rendszeréhez hozzáférjenek.
-                                A felületet VUE és Tailwind CSS segítségével építettem fel.
+                            <div class="mb-2">
+                                {{ $t('WPKioskDevProcess1') }}
                             </div>
                             <div class="mb-2">
-                                A főoldalra egy folyamatosan futó, egyedi háttérvideót készítettem, amit a ZNET Telekom meglévő videóiból állítottam össze 30 másodpercben.
-                                A kiosk létrehozása közben több olyan problémába is belebotlottam, amik megoldásával sokat tanultam mind a böngésző, mind a Raspbian OS rendszerről.
+                                {{ $t('WPKioskDevProcess2') }}
                             </div>
                             <div class="mb-2">
-                                Többek között: fontos volt, hogy a felhasználó ne tudja semmilyen körülmények között elhagyni a kiosk felületét. A PDF-ekben található :mailto linkek (e-mail címek) és az egyéb külső oldalakra mutató linkek azonban ezt nem tették lehetővé, ezért elő kellett állnom egy megoldással.
-                                A mailto linkek tiltására Írtam egy bash scriptet, ami megakadályozza, hogy a Chromium böngészőből e-mail kliens nyíljon meg, így a felhasználók nem tudnak külső programokat elérni.
-                                A külső weboldalak megnyílása egy öszetettebb probléma volt, így összetettebb megoldást is igényelt. JavaScript alapokon készítettem egy saját Chrome extensiont, amely tilt minden olyan próbálkozást, ami egy másik weboldal megnyitására irányul. Ha ilyen történne, a rendszer azonnal visszanavigál a főoldalra.
+                                {{ $t('WPKioskDevProcess3') }}
                             </div>
                             <div>
-                                Az oldalak adatainak többsége egy könnyen hozzáférhető külső JavaScript tömbből töltődik.
+                                {{ $t('WPKioskDevProcess4') }}
                             </div>
                             <div class="mb-2">
-                                Mivel érintőképernyős, fizikai billentyűzet nélüli rendszerre kellett tervezni, ezért szükség volt a panaszkezelési "form" miatt beépíteni egy moduláris virtuális billentyűzetet, ami kompatibilis VUE-vel. Erre a célra a legalkalmasabbnak a <a class="toOutsideLink" href="https://furcan.github.io/KioskBoard/" target="_blank">KioskBoard</a> minősült.
+                                <span>{{ $t('WPKioskDevProcess5') }}</span> <a class="toOutsideLink" href="https://furcan.github.io/KioskBoard/" target="_blank">KioskBoard</a>.
                             </div>
                             <div>
-                                A panaszkezelés "form" validációval van ellátva. A küldés gomb megnyomásával Axios kéréssel API-n keresztül kommunikál a weboldal megfelelő backend szegmensével.
+                                {{ $t('WPKioskDevProcess6') }}
                             </div>
                             <div>
-                                Kérés volt az ügyfélszolgálat felől az is, hogy ha az ügyfelek használat után otthagyják a kioskokat, akkor egy bizonyos idő után álljanak vissza alapállapotba.
-                                Ezért, úgy hozam létre a projektet, hogy az oldal 15 perc inaktivitás után automatikusan visszatér a főoldalra.
+                                {{ $t('WPKioskDevProcess7') }}
                             </div>
                         </div>
                     </div>
                     <!-- Screenshots -->
                     <div class="row py-4">
-                        <h3 class="mb-5">Képernyőképek</h3>
+                        <h3 class="mb-5">{{ $t('screenshots') }}</h3>
                         <div class="row justify-content-center">
                             <div v-for="(image, index) in images" :key="index" class="col-md-4 col-sm-6 mb-4">
                                 <a :href="image.src" class="glightbox" :data-gallery="'gallery1'">
@@ -90,14 +89,14 @@ export default {
     components: {TechSection},
     setup() {
         const images = ref([
-            { src: "/media/imgs/projects/web/kiosk_1.png", alt: "Kiosk kép 1" },
-            { src: "/media/imgs/projects/web/kiosk_2.png", alt: "Kiosk kép 2" },
-            { src: "/media/imgs/projects/web/kiosk_8.png", alt: "Kiosk kép 8" },
-            { src: "/media/imgs/projects/web/kiosk_3.png", alt: "Kiosk kép 3" },
-            { src: "/media/imgs/projects/web/kiosk_4.png", alt: "Kiosk kép 4" },
-            { src: "/media/imgs/projects/web/kiosk_5.png", alt: "Kiosk kép 5" },
-            { src: "/media/imgs/projects/web/kiosk_6.png", alt: "Kiosk kép 6" },
-            { src: "/media/imgs/projects/web/kiosk_7.png", alt: "Kiosk kép 7" },
+            { src: "/media/imgs/projects/web/kiosk_1.png", alt: "Kiosk pic 1" },
+            { src: "/media/imgs/projects/web/kiosk_2.png", alt: "Kiosk pic 2" },
+            { src: "/media/imgs/projects/web/kiosk_8.png", alt: "Kiosk pic 8" },
+            { src: "/media/imgs/projects/web/kiosk_3.png", alt: "Kiosk pic 3" },
+            { src: "/media/imgs/projects/web/kiosk_4.png", alt: "Kiosk pic 4" },
+            { src: "/media/imgs/projects/web/kiosk_5.png", alt: "Kiosk pic 5" },
+            { src: "/media/imgs/projects/web/kiosk_6.png", alt: "Kiosk pic 6" },
+            { src: "/media/imgs/projects/web/kiosk_7.png", alt: "Kiosk pic 7" },
         ]);
 
         onMounted(() => {
@@ -109,20 +108,25 @@ export default {
         return {
             kiosk_main,
             features: [
-                "Információ átadás",
-                "ÁSZF megtekintése",
-                "Panaszkezelés",
-                "Validált beviteli mezők",
-                ":mailTo linkek letiltva",
-                "Egyedi Chrome Extension a navigáció és a megnyíló oldalak korlátozására",
-                "Saját készítésű háttérvideó",
-                "PDF dokumentumok megnyitása modálban",
-                "Automatikus visszaállás főoldalra",
-                "Beépített virtuális billentyűzet (KioskBoard)",
-                "Érintésre optimalizált UI",
+                "informationTransfer",
+                "termsAndConditions",
+                "complaintManagement",
+                "validatedInputs",
+                "mailtoDisabled",
+                "chromeExtension",
+                "backgroundVideo",
+                "pdfModal",
+                "returnToHome",
+                "kioskBoard",
+                "touchOptimized",
             ],
         };
     },
+    computed: {
+        translatedFeatures() {
+            return this.features.map(feature => this.$t(`WPKioskFeatures.${feature}`));
+        }
+    }
 }
 </script>
 

@@ -12,14 +12,21 @@
                 <div class="container py-5">
                     <h3 class="mb-3">{{ $t('projectFeatures') }}</h3>
                     <div class="row align-items-center">
-                        <div class="col-12 col-md-7 text-center">
-                            <a :href="Queue_main" class="glightbox">
-                                <img
-                                    :src="Queue_main"
-                                    alt="Schedule calendar with coverage indicators"
-                                    class="img-fluid rounded shadow-lg project-img"
-                                />
-                            </a>
+                        <div class="col-12 col-md-7">
+                            <div class="text-center">
+                                <a :href="Queue_main" class="glightbox">
+                                    <img
+                                        :src="Queue_main"
+                                        alt="Schedule calendar with coverage indicators"
+                                        class="img-fluid rounded shadow-lg project-img"
+                                    />
+                                </a>
+                            </div>
+
+                            <!-- Used Technologies -->
+                            <div class="row tech-section">
+                                <tech-section/>
+                            </div>
                         </div>
                         <div class="col-12 col-md-5">
                             <ul class="list-group project-glass-list">
@@ -29,10 +36,7 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Used Technologies -->
-                    <div class="row py-4">
-                        <tech-section/>
-                    </div>
+
                     <div class="row py-4">
                         <h3 class="mb-3">{{ $t('developmentProcess') }}</h3>
                         <div class="development-process-text">
