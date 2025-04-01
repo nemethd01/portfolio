@@ -5,7 +5,7 @@ const gameProjectsData = [
         title: "Game",
         image: underConstruction,
         navigateTo: "#",
-        technologies: "Not have yet, but working on it :)"
+        technologies: "Don't have it yet, but working on it :)"
     },
 ];
 
