@@ -1,5 +1,5 @@
 <template>
-    <h3 class="mb-3">Használt techológiák</h3>
+    <h3 class="mb-3">{{ $t('technologiesUsed') }}</h3>
 
     <div class="skill-icon-container">
         <skill-icon name="PHP" :icon="phpSvg"/>

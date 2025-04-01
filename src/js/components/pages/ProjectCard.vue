@@ -1,7 +1,7 @@
 <template>
     <div class="container w-75 mb-4">
         <router-link :to="navigateTo" :class="[routerClasses]">
-        <div class="card web-card d-flex flex-row align-items-center mb-3">
+        <div class="card game-card d-flex flex-row align-items-center mb-3">
             <img :src="projectImage" :class="[imgClasses]" alt="Project Image">
             <div :class="[cardBodyClasses]">
                 <h5 class="card-title">{{ projectTitle }}</h5>

@@ -1,14 +1,14 @@
 <template>
     <div class="web-projects-page">
         <div class="header">
-            <h1>Számok kiírása string-el</h1>
-            <p>Számok szöveggé alakítása a magyar helyesírás szabályai szerint</p>
-            <a href="https://github.com/nemethd01/NumbersToString.git" target="_blank" class="btn custom-button">Nézd meg GitHubon</a>
+            <h1>{{ $t('webProjects.numbersToStringsTitle') }}</h1>
+            <p>{{ $t('WPNumbersToStringHeading') }}</p>
+            <a href="https://github.com/nemethd01/NumbersToString.git" target="_blank" class="btn custom-button">{{ $t('viewOnGitHub') }}</a>
         </div>
         <div class="project-content-wrapper">
             <div class="container">
                 <div class="container py-5">
-                    <h3 class="mb-3">Projekt funkciók</h3>
+                    <h3 class="mb-3">{{ $t('projectFeatures') }}</h3>
                     <div class="row align-items-center">
                         <div class="col-12 col-md-7">
                             <div class="text-center">
@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-12 col-md-5">
                             <ul class="list-group project-glass-list">
-                                <li v-for="(item, index) in features" :key="index" class="list-group-item">
+                                <li v-for="(item, index) in translatedFeatures" :key="index" class="list-group-item">
                                     <span class="list-group-index">#{{ index + 1 }}</span> {{ item }}
                                 </li>
                             </ul>
@@ -36,24 +36,22 @@
                     </div>
 
                     <div class="row py-4">
-                        <h3 class="mb-3">Fejlesztési folyamat</h3>
+                        <h3 class="mb-3">{{ $t('developmentProcess') }}</h3>
                         <div class="development-process-text">
                             <div class="mb-2">
-                                A projekt elkészítésének célja a PHP nyelv tanulása volt, amin belül főként a stringkezelésen, a logikán és a nagyságrendi szabályok kezelésén volt a hangsúly.
+                                {{ $t('WPNumbersToStringDevProcess1') }}
                             </div>
                             <div class="mb-2">
-                                A program a megadott számot különböző helyiértékekre bontja (egységek, tizesek, százasok, ezresek, milliósok), majd a megfelelő magyar nyelvi szabályok alapján szöveggé alakítja.
-                                Figyelembe veszi a magyar helyesírási szabályokat, például azt, hogy kétezerig egybeírjuk a számokat, azon túl viszont csak a kerek ezreseket és milliósokat kötjük össze.
+                                {{ $t('WPNumbersToStringDevProcess2') }}
                             </div>
                             <div class="mb-2">
-                                A rendszer GET-alapú bevitel segítségével dolgozza fel a felhasználó által megadott számot, és a megfelelő formátumban jeleníti meg az eredményt.
-                                Az a felület egy egyszerű HTML-űrlapot tartalmaz számbevitelhez és a kiírt szöveg megjelenítéséhez, továbbá egy Reset gombot is.
+                                {{ $t('WPNumbersToStringDevProcess3') }}
                             </div>
                         </div>
                     </div>
                     <!-- Screenshots -->
                     <div class="row mb-5 py-4">
-                        <h3 class="mb-5">Képernyőképek</h3>
+                        <h3 class="mb-5">{{ $t('screenshots') }}</h3>
                         <div class="row justify-content-center">
                             <div v-for="(image, index) in images" :key="index" class="col-md-4 col-sm-6 mb-4">
                                 <a :href="image.src" class="glightbox" :data-gallery="'gallery1'">
@@ -63,7 +61,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="https://github.com/nemethd01/NumbersToString.git" target="_blank" class="btn custom-button">Nézd meg GitHubon</a>
+                        <a href="https://github.com/nemethd01/NumbersToString.git" target="_blank" class="btn custom-button">{{ $t('viewOnGitHub') }}</a>
                     </div>
                 </div>
             </div>
@@ -98,15 +96,20 @@ export default {
         return {
             numbersToString_main,
             features: [
-                "Számok szöveggé alakítása a magyar helyesírás szabályai szerint",
-                "GET-alapú bevitel és feldolgozás",
-                "Számok helyes elválasztása (kétezerig egybeírva, azon túl csak a kerek ezresek és milliók kötőjelesek)",
-                "Űrlap alapú (számbevitel és kiírás)",
-                "Reset funkció",
-                "Dinamikus HTML-kimenet",
+                "numbersToString",
+                "getInput",
+                "correctSeparation",
+                "formBased",
+                "reset",
+                "dynamicOutput",
             ],
         };
     },
+    computed: {
+        translatedFeatures() {
+            return this.features.map(feature => this.$t(`WPNumbersToStringFeatures.${feature}`));
+        }
+    }
 }
 </script>
 

@@ -146,6 +146,45 @@ const messages = {
             oopAndMvc: "OOP - MVC",
             autoload: "PHP autoload",
         },
+        // WebP - NumbersToString
+        WPNumbersToStringHeading: "Számok szöveggé alakítása a magyar helyesírás szabályai szerint",
+        WPNumbersToStringDevProcess1: "A projekt elkészítésének célja a PHP nyelv tanulása volt, amin belül főként a stringkezelésen, a logikán és a nagyságrendi szabályok kezelésén volt a hangsúly.",
+        WPNumbersToStringDevProcess2: "A program a megadott számot különböző helyiértékekre bontja (egységek, tizesek, százasok, ezresek, milliósok), majd a megfelelő magyar nyelvi szabályok alapján szöveggé alakítja.\n" +
+            "Figyelembe veszi a magyar helyesírási szabályokat, például azt, hogy kétezerig egybeírjuk a számokat, azon túl viszont csak a kerek ezreseket és milliósokat kötjük össze.",
+        WPNumbersToStringDevProcess3: "A rendszer GET-alapú bevitel segítségével dolgozza fel a felhasználó által megadott számot, és a megfelelő formátumban jeleníti meg az eredményt.\n" +
+            "Az a felület egy egyszerű HTML-űrlapot tartalmaz számbevitelhez és a kiírt szöveg megjelenítéséhez, továbbá egy Reset gombot is.",
+        WPNumbersToStringFeatures: {
+            numbersToString: "Számok szöveggé alakítása a magyar helyesírás szabályai szerint",
+            getInput: "GET-alapú bevitel és feldolgozás",
+            correctSeparation: "Számok helyes elválasztása (kétezerig egybeírva, azon túl csak a kerek ezresek és milliók kötőjelesek)",
+            formBased: "Űrlap alapú (számbevitel és kiírás)",
+            reset: "Reset funkció",
+            dynamicOutput: "Dinamikus HTML-kimenet",
+        },
+        // WebP - CalcAndRandomNum
+        WPCalcAndRandomNumHeading: "Egyszerű matematikai műveletekkel operáló számológép és meghatározható mennyiségű páros szám generátor",
+        WPCalcAndRandomNumDevProcess1: "A projekt elkészítésének célja a PHP nyelv tanulása volt. Ez az oldal két interaktív programot tartalmaz: egy véletlenszám-generátort és egy számológépet.",
+        WPCalcAndRandomNumDevProcess2: "A véletlenszám-generátor lehetővé teszi a felhasználó számára, hogy egy számot adjon meg, ami meghatározza, hány véletlenszerű számot szeretne generálni.\n" +
+            "A rendszer csak a páros számokat jeleníti meg.",
+        WPCalcAndRandomNumDevProcess3: "A számológép lehetővé teszi, hogy a felhasználó egyszerű műveleteket végezzen (összeadás, kivonás, szorzás, osztás).\n" +
+            "Számokat és műveleti jeleket adhatunk hozzá, és a program automatikusan kiszámolja az eredményt a megfelelő műveleti sorrendben.\n" +
+            "A számológép a nullával történő osztás megkísérlése esetén hibát jelez.",
+        WPCalcAndRandomNumDevProcess4: "Mindkét program kiszűri a nem számjegyeket a bevitelből, így csak érvényes számokat fogad el, továbbá mindegyik GET-alapú bevitel segítségével dolgozza fel a felhasználó által megadott számot, és a megfelelő formátumban jeleníti meg az eredményt.\n" +
+            "Ha a felhasználó érvénytelen számot ad meg, akkor hibaüzenet figyelmezteti.",
+        WPCalcAndRandomNumDevProcess5: "A fejlesztés során a legnagyobb kihívást az adta, hogy biztosítani kellett, hogy a felhasználók által megadott adatok mindig a megfelelő formátumban legyenek, és a műveletek a várt eredményt adják.\n" +
+            "A véletlenszám-generátor esetében a számok kiszűrése és a páratlan számok megjelenítése, míg a számológépnél a műveletek megfelelő sorrendje és a hibák kezelése volt a legnagyobb munka.",
+        WPCalcAndRandomNumFeatures: {
+            randomNum: "Véletlenszám-generálás (csak páros)",
+            validatedInputs: "Validált beviteli mezők",
+            regex: "Regex használata",
+            getBasedForms: "GET-alapú űrlapkezelés",
+            reset: "Reset funkció",
+            dynamicOutput: "Dinamikus HTML-kimenet",
+            divisionByZero: "Nullával való osztás ellenőrzött és kezelve van",
+            clearable: "Törölhető művelet",
+            calcByPrior: "Eredmény kiszámítása az alapműveletek prioritásának megfelelően",
+            simpleOperation: "Egyszerű matematikai műveletek végrehajtása (+, -, *, /)",
+        },
 
         // Game Development Page
         gameEngine: 'Játék motor',
@@ -381,6 +420,45 @@ const messages = {
             uploadSeparation: "Uploaded files separated into different folders by upload time (backend)",
             oopAndMvc: "OOP - MVC",
             autoload: "PHP autoload",
+        },
+        // WebP - NumbersToString
+        WPNumbersToStringHeading: "Converting numbers to text according to Hungarian spelling rules",
+        WPNumbersToStringDevProcess1: "The goal of the project was to learn the PHP programming language, focusing mainly on string manipulation, logic, and handling magnitude rules.",
+        WPNumbersToStringDevProcess2: "The program breaks down the given number into different place values (ones, tens, hundreds, thousands, millions), and then converts it into text according to the appropriate Hungarian language rules." +
+            "It takes into account Hungarian spelling rules, such as writing numbers as a single word up to two thousand, while only linking round thousands and millions after that.",
+        WPNumbersToStringDevProcess3: "The system processes the number entered by the user through GET-based input and displays the result in the appropriate format." +
+            "The interface contains a simple HTML form for number input and the display of the converted text, along with a Reset button.",
+        WPNumbersToStringFeatures: {
+            numbersToString: "Converting numbers to text according to Hungarian spelling rules",
+            getInput: "GET-based input and processing",
+            correctSeparation: "Correct separation of numbers (written as one word up to two thousand, after that only round thousands and millions are hyphenated)",
+            formBased: "Form-based (number input and output)",
+            reset: "Reset function",
+            dynamicOutput: "Dynamic HTML output",
+        },
+        // WebP - CalcAndRandomNum
+        WPCalcAndRandomNumHeading: "A simple calculator performing basic mathematical operations and a generator for a definable quantity of even numbers",
+        WPCalcAndRandomNumDevProcess1: "The goal of the project was to learn the PHP programming language. This page contains two interactive programs: a random number generator and a calculator.",
+        WPCalcAndRandomNumDevProcess2: "The random number generator allows the user to input a number that defines how many random numbers they want to generate.\n" +
+            "The system displays only even numbers.",
+        WPCalcAndRandomNumDevProcess3: "The calculator allows the user to perform simple operations (addition, subtraction, multiplication, division).\n" +
+            "Numbers and operators can be added, and the program automatically calculates the result according to the correct order of operations.\n" +
+            "The calculator displays an error if an attempt is made to divide by zero.",
+        WPCalcAndRandomNumDevProcess4: "Both programs filter out non-numeric characters from the input, accepting only valid numbers. They both process the number entered by the user through GET-based input and display the result in the appropriate format.\n" +
+            "If the user enters an invalid number, an error message will warn them.",
+        WPCalcAndRandomNumDevProcess5: "The biggest challenge during development was ensuring that the data entered by users was always in the correct format and that the operations returned the expected results.\n" +
+            "In the case of the random number generator, filtering numbers and displaying only even numbers was the most significant task, while in the calculator, ensuring the correct order of operations and handling errors was the main focus.",
+        WPCalcAndRandomNumFeatures: {
+            randomNum: "Random number generation (even numbers only)",
+            validatedInputs: "Validated input fields",
+            regex: "Usage of regex",
+            getBasedForms: "GET-based form handling",
+            reset: "Reset function",
+            dynamicOutput: "Dynamic HTML output",
+            divisionByZero: "Division by zero checked and handled",
+            clearable: "Clearable operation",
+            calcByPrior: "Calculation of the result according to the priority of basic operations",
+            simpleOperation: "Performing simple mathematical operations (+, -, *, /)",
         },
 
         // Game Development Page

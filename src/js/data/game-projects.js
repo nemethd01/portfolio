@@ -1,13 +1,13 @@
-import kiosk from "/media/imgs/projects/web/kiosk_main.png"
+import underConstruction from "/media/imgs/projects/helpers/under_construction.jpg"
 
-const webProjectsData = [
+const gameProjectsData = [
     {
-        name: "Game",
-        image: kiosk,
-        navigateTo: "/work/web-development/kiosk",
-        technologies: "Vue, JavaScript, Tailwind"
+        title: "Game",
+        image: underConstruction,
+        navigateTo: "#",
+        technologies: "Not have yet, but working on it :)"
     },
 ];
 
 
-export default webProjectsData;
+export default gameProjectsData;
