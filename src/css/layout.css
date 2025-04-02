@@ -289,6 +289,10 @@
     background-size: cover;
 }
 
+.web-development-page .custom-button {
+    width: 15rem;
+}
+
 .web-development-page h1 {
     font-weight: bold;
     letter-spacing: 0.2rem;

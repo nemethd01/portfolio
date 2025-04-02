@@ -26,6 +26,7 @@ const messages = {
         developmentProcess: 'Fejlesztési folyamat',
         screenshots: 'Képernyőképek',
         technologiesUsed: "Használt technológiák",
+        otherProjects: "További GitHub projektek",
 
         // Web Development Page
         languagesAndTechnology: 'Programozási nyelvek és Technológiák',
@@ -301,6 +302,7 @@ const messages = {
         developmentProcess: 'Development Process',
         screenshots: 'Screenshots',
         technologiesUsed: "Technologies Used",
+        otherProjects: "Other GitHub projects",
 
         // Web Development Page
         languagesAndTechnology: 'Programming Languages and Technologies',

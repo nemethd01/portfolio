@@ -12,6 +12,9 @@
             :card-text-classes="['web-card-text']"
         />
     </div>
+    <div class="text-center mt-5">
+        <a href="https://github.com/nemethd01" target="_blank" class="btn custom-button">{{ $t('otherProjects') }}</a>
+    </div>
 </template>
 
 <script>
